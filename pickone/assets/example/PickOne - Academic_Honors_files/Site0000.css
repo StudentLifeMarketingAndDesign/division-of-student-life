@@ -1,0 +1,674 @@
+/* Reset courtesy of Yahoo. Has BSD license. */
+html{color:#000;background:#FFF;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{font-size:100%;}
+
+html, body { height: 100%; }
+
+#background-wrapper {
+	background-image: url(backgrou.jpg);
+	background-repeat: repeat;
+	min-height: 100%;
+	position: relative;
+}
+
+#header {
+	background-image: url(clouds00.png); 
+	background-repeat: repeat-x;
+	height: 110px;
+	width: auto;
+	padding: 0;
+	margin: 0;
+	/*-moz-box-shadow: -20px 13px 13px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0px 13px 13px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 13px 13px rgba(0, 0, 0, 0.25);*/
+	position: relative;
+	
+}
+
+#header img {
+	/*margin-top: 30px;*/
+	margin: 0;
+	padding: 0;
+}
+
+#header-content{
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+
+}
+
+#header-content h1 {
+	display: inline;
+	float: left;
+    padding-top: 0.1em;
+}
+
+#header-nav{
+	float: right;
+	margin-top: 1em;
+    text-align: right;
+}
+
+#pagetitle 
+{
+    text-decoration: none;
+}
+
+.uiowa-logo{
+	height: 28px;
+
+}
+
+#nav{
+	list-style-type: none;
+	margin-top: 1em;
+	padding: 0;
+}
+
+#nav li {
+
+	float: left;
+
+
+}
+
+#nav li a, #nav li span{
+	padding-left: 32px;
+	padding-right: 32px;
+}
+
+#nav .first{
+	padding-left: 0px;
+}
+
+
+.clear-left {
+	clear: left;
+}
+
+.clear {
+	clear: both;
+
+}
+
+#body-wrapper 
+{
+    min-height: 50%;
+    border-bottom: 1px solid #081D25;
+    padding-bottom: 25px;
+}
+
+#content-wrapper {
+
+	margin: auto;
+	min-height: 700px;
+	margin: 15px auto 0px auto;
+	width: 1000px;
+}
+
+#content {
+	width: 750px;
+
+
+    float: left;
+    /*padding-top: 10px;*/
+}
+
+#pick-content {
+
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+#pick-head, .pick-head {
+	background: #BC5D2F;
+	background: url(pickoneheadbg.jpg);
+	padding: 20px;
+	/*margin: 10px 0;*/
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+
+}
+
+
+#pick-head h1, .pick-head h1{
+	float: left;
+	margin-right: 25px;
+}
+
+.search-result-actions {
+	float: left;
+	margin-top: 7px;
+
+}
+
+.list-pick-head {
+    background: #BC5D2F;
+    background: url(pickoneheadbg.jpg);
+    padding: 10px;
+    /*margin: 10px 0;*/
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.typography .list-pick-head a {
+	color: #fef6d6;
+	text-decoration: none;
+
+
+}
+
+
+.org-list-item {
+		/*background-color: #265469; *//* ie.. grr */
+		/*background-color: rgba(55,81,91, 0.33);*/
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+
+}
+
+#org-contact-info1 {
+
+float: left;
+width: 40%;
+margin-right: 25px;
+
+}
+
+#org-contact-info2{
+	float: left;
+	width: 40%;
+
+}
+
+#pick-head h1 { float: left;}
+#pick-head.action-link {float: left;}
+
+.pick-head.org h1 {
+
+	margin-right: 25px;
+
+}
+
+.pick-this {
+	/*margin-left: 50px; */
+	/*margin-top: 14px;*/
+	background: #FEEFB1 !important;
+	color: #4a4a4a !important;
+	-webkit-box-shadow: 1px 1px 5px #333333;
+	-moz-box-shadow: 1px 1px 5px #333333;
+	box-shadow: 1px 1px 5px #333333;
+	/*border: 1px solid #3b3b3b !important;*/
+
+}
+
+.pick-this {
+	text-decoration: none;
+}
+
+.more-info {
+	text-decoration: none;
+	color: white !important;
+	
+
+	
+	-webkit-box-shadow: 1px 1px 5px #333333;
+	-moz-box-shadow: 1px 1px 5px #333333;
+	box-shadow: 1px 1px 5px #333333;
+	
+
+}
+
+#footer {
+	background: #081d25;
+	min-height: 100px;
+	width: 100%;
+	/*margin-top: 25px;*/
+    clear: both;
+    border-top: 1px solid #979797;
+}
+
+#footer-content{
+	padding-top: 22px;
+	padding-bottom: 22px;
+	width: 1000px;
+	margin:auto;
+}
+#footer-content td 
+{
+    vertical-align: top;
+    padding-right: 2em;
+}
+#footer-content a, #footer-content div
+{
+    color: rgb(254, 239, 177) !important;
+    font-size: 14px;
+}
+#footer-content h4 
+{
+    font-size: 22px;
+}
+
+#contact-info {
+	float: left;
+	margin-right: 75px;
+}
+
+#help {
+	float: left;
+
+}
+
+.copyright{
+	float: right;
+	text-align: right;
+
+}
+
+
+
+/* Search Results */
+.org-list-item 
+{
+   margin: 30px 0;
+}
+
+.org-list-item h4{
+	    background: #BC5D2F;
+    background: url(pickoneheadbg.jpg);
+    padding: 10px;
+    /*margin: 10px 0;*/
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+
+}
+
+.action-link 
+{
+    background: #cc8800;
+    display: inline-block;
+    padding: 0.5em;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    color: White;
+    margin-right: 0.25em;
+    border: 0;
+    /*text-decoration: underline;*/
+    cursor: pointer;
+}
+
+.typography .action-link a {
+	color: #FEEFB1
+
+}
+
+#pick 
+{
+    font-size: 14pt;
+}
+input.action-link 
+{
+    height: 1.8em;
+}
+.search-result-actions 
+{
+    margin-bottom: 0.25em;
+ 
+}
+
+.search-result-actions.org
+{
+   /*float: left;*/
+ 
+}
+
+
+.org-details-table, .org-long-details-table, .org-leaders-table
+{
+    width: 100%;
+}
+.org-details-table td 
+{
+    padding-top: 1em;
+    vertical-align: top;
+}
+
+.org-leaders-table, .org-long-details-table
+{
+    margin-top: 1em;
+}
+
+/*.org-details-table {
+
+	background: #FEEFB1;
+}
+
+*/
+
+
+.social-networking-bar 
+{
+   /*	padding: 20px; */
+   /* text-align: right;*/
+
+}
+
+/* LogOn popup form */
+#dialog #logon_form_btn, #dialog #logon_form_instr 
+{
+    display: none;
+}
+
+.validation-summary-errors 
+{
+    border: 1px solid blue;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background: #FFFFCC;
+    padding: 0.5em;
+    margin: 0 0 0.5em 0;
+}
+
+.validation-summary-errors *
+{
+    color: black !important;
+}
+
+.validation-summary-errors li
+{
+    margin: 0.25em 0.25em 0.25em 1.5em;
+    list-style-type: circle;
+}
+
+.editor-field > input
+{
+    color: Black !important;
+}
+
+/* Search Tool */
+#searchtool 
+{
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background: white;
+    position: relative;
+    width: 100%;
+    height: 1.75em;
+}
+.search_textbox 
+{
+    background: transparent;
+    position: absolute;
+    left: 0.25em;
+    top: 0.25em;
+    right: 32px;
+    width: auto;
+    height: 1.25em;
+    border: 0;
+    color: Black !important;
+}
+.search_button 
+{
+    border-radius: 0 6px 6px 0;
+    -moz-border-radius: 0 6px 6px 0;
+    -webkit-border-radius: 0 6px 6px 0;
+    border: 1px solid #888;
+    border-top: 1px solid #CCC;
+    border-left: 1px solid #CCC;
+    position: absolute;
+    top: 0em;
+    right: 0;
+    height: 1.7em;
+    width: 1.7em;
+    background: url(http://pickone.uiowa.edu/Content/Css/images/sqr-btn-bkg.jpg);
+}
+
+.pagination {
+	background: rgba(25,67,82,0.33);
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	padding: 10px;
+	line-height: 20px;
+
+}
+
+.pagination *.number {
+	padding: 0 5px;
+}
+
+.pagination a {
+	text-decoration: none;
+
+}
+
+.handlogo 
+{
+    margin: 0 -0.5em -0.1em 0;
+}
+
+#categories {
+	margin-top: 15px;
+
+}
+
+#categories ul {
+	margin: 0;
+	margin-left: 15px;
+
+}
+
+#categories li {
+	list-style-type: none;
+	padding: 2px 0;
+	font-size: 18px;
+
+}
+
+#categories a {
+	text-decoration: none;
+
+}
+
+
+/* Picks Menu */
+#picksmenu 
+{
+    width: 220px;
+    float: right;
+}
+
+#picksmenu h2
+{
+    font-family: 'Reenie Beanie', arial, serif; 
+	font-size: 300%;
+	color: White;
+}
+
+/*#picksmenu ul > li > *
+{
+    color: rgb(254, 239, 177) !important;
+}
+*/
+/* Typography */
+.bullets 
+{
+    margin: 1em 1em 1em 2em;
+}
+.bullets > li
+{
+    margin: 0.25em;
+    list-style: circle;
+}
+
+#header h1 {
+	font-family: 'Cabin', arial, serif; 
+	font-size: 60px;
+	color: #2895bd;
+}
+
+.typography * {
+	font-family: 'Cabin', arial, serif;
+	color: white;
+}
+
+.typography a {
+	color: #f7df7b;
+
+}
+
+.typography h4 a {
+	color: #FEEFB1;
+
+}
+
+.typography p {
+	margin: 10px 0;
+}
+
+.typography h1, .typography h1 > a {
+	font-family: 'Cabin', arial, serif;
+	color: #feefb1;
+	font-size: 40px;
+	font-weight: bold;
+	margin: 5px 0;
+}
+
+.typography h2 {
+	font-weight: bold;
+	font-size: 32px;
+	margin: 5px 0;
+}
+
+
+.typography h3 {
+	color: #feefb1;
+	font-size: 26px;
+	margin: 5px 0;
+
+}
+
+.typography h4 {
+	
+	color: #fef6d6;
+	font-size: 20px;
+	margin: 5px 0;
+	
+
+
+}
+
+
+.typograhy h1 a, .typograhy h2 a, .typograhy h3 a, .typography h4 a {
+	text-decoration: none;
+
+
+}
+
+.typography ul {
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+
+.typography ul li {
+	list-style-type: square;
+
+}
+
+/*.typography h4, .typography h1 > a
+{
+    font-family: 'Reenie Beanie', Arial, Serif;
+    font-size: 1px;
+}*/
+
+
+
+.yellow, .yellow > a
+{
+    color: rgb(254, 239, 177);
+}
+
+.blue, .blue > a
+{
+    color: #2895bd;
+}
+
+.orange, .orange > a
+{
+    color: #ff5a04;
+}
+
+span.student-orgs {
+	font-size: 18px;
+
+}
+
+#categories ul.student-orgs {
+	margin-left: 0.5em;
+
+
+}
+
+#categories ul li a {
+	 color: rgb(254, 239, 177);
+
+}
+
+#categories ul.student-orgs li a {
+
+	color: #f7df7b;
+
+
+}
+
+
+
+/* JQuery UI */
+#dialog { display: none; }
+
+/* JQuery Type-Ahead */
+.jqTypeAhead 
+{   text-align: left;
+	position: absolute; /*border: 1px solid white;*/
+	background: inherit;
+	padding: 2px;
+}
+.jqTypeAhead td
+{
+    width: 100%; cursor: pointer;
+    background: #000;
+    -moz-opacity: 0.75;
+	-webkit-opacity: 0.75;
+	opacity: 0.75;
+	padding: 0 0.25em 0 0.25em;
+}
+.jqTypeAhead tr:last-child>td
+{
+   	border-radius: 0 0 8px 8px;
+	-moz-border-radius: 0 0 8px 8px;
+	-webkit-border-radius: 0 0 8px 8px;
+}
+.jqTypeAhead span { font-weight: bold; }
+.jqTASelected { opacity: 1.0 !important; -moz-opacity: 1.0 !important; -webkit-opacity: 1.0 !important; background: #6666FF !important; color: white; width: 100%; }
+.jqTAHelp { color: gray; font-size: 8pt; width: 100%; text-align: center;
+	border-top: 1px solid gray; margin-top: 2px;
+}

@@ -1,0 +1,93 @@
+.sidebar {
+	float:right;
+	width:300px;
+	margin-top:20px;
+}
+
+
+.side-box {
+	margin-bottom:20px;
+	color:#fff;
+	
+	h3 {
+		font-family:'Yanone Kaffeesatz', Arial, sans serif;
+		font-size:2em;
+		margin:0 0 0.4em 0;
+		padding:0;
+		color:#fff;
+	}
+}
+
+
+
+
+/* Sidebox feature											*/
+/* ======================================================== */
+
+.side-feature {
+	background-color:$yellow;
+	width:300px;
+	margin-left:-15px;
+	padding:15px;
+	margin-bottom:20px;
+}
+
+
+
+
+/* Newsletter signup 										*/
+/* ======================================================== */
+
+#newsletter-signup {
+	
+	#newsletter-field {
+		width:222px; /* 234 width minus 12px padding */
+		float:left;
+		margin-right:5px;
+	}
+	
+	#newsletter-submit {
+		
+	}
+}
+
+
+/* Twitter List		 										*/
+/* ======================================================== */
+
+#twitter {
+	border-bottom:1px solid #777;
+}
+
+.twitter-post {
+	border-top:1px solid #777;
+	padding-top:0.6em;
+	
+	.avatar {
+		width:48px;
+		float:left;
+	}
+	
+	.tweet {
+		margin-left:58px;
+		
+		p {
+			margin-bottom:0.6em;
+		}
+		
+		p.account {
+			margin:0;
+			padding:0;
+			color:#999;
+		}
+		
+	}
+	
+	a {
+		color:$gold;
+	}
+}
+
+
+
+

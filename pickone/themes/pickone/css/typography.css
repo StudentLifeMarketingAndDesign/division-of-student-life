@@ -1,0 +1,65 @@
+#header h1 {
+	font-family: 'Reenie Beanie', arial, serif; 
+	font-size: 60px;
+	color: #2895bd;
+}
+
+.typography * {
+	font-family: 'Cabin', arial, serif;
+	color: white;
+}
+
+.typography a {
+	color: #f7df7b;
+
+}
+
+.typography h2 a {
+	text-decoration: none;
+}
+
+.typography p {
+	margin: 10px 0;
+}
+
+.typography h1, .typography h1 > a {
+	font-family: 'Cabin', arial, serif;
+	color: #feefb1;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.typography h2 {
+	font-weight: bold;
+	font-size: 32px;
+}
+
+
+.typography h3 {
+	color: #feefb1;
+	font-size: 26px;
+
+}
+
+.typography h4 {
+	
+	color: #fef6d6;
+	font-size: 20px;
+	
+
+
+}
+.typography strong {
+	color: 
+
+
+}
+
+#tagline p{
+	font-size: 65px;
+}
+
+#tagline p strong{
+	color: #ff7732;
+
+}

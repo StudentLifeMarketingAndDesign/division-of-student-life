@@ -1,0 +1,43 @@
+#navigation {
+	height:95px;
+	background:url('/images/logo.png'); // 311x54
+	background-repeat:no-repeat;
+	background-position:20px 30px;
+	overflow:hidden;
+	
+	ul {
+		height:14px;
+		position:relative;
+		margin:71px 0 0 475px;
+		padding:0;
+		
+		li {
+			list-style:none;
+			position:absolute;
+			top:0;
+			margin:0;
+			padding:0;
+		}
+		
+		li, a {
+			display:block;
+			height:14px;
+		}
+		
+		a { position:absolute; display:block; background:url('/images/nav-sprite.png') no-repeat top right; height:0; padding-top:14px; overflow:hidden;}
+		li#nav-student_success a    { left:0px; width:109px; background-position:0px 0px;}
+		li#nav-campus_life a     	{ left:109px; width:93px; background-position:-109px 0px;}
+		li#nav-health_and_safety a	{ left:202px; width:124px;  background-position:-202px 0px;}
+		li#nav-parents a			{ left:326px; width:64px;  background-position:-326px 0px;}
+		li#nav-staff a				{ left:390px; width:47px;  background-position:-390px 0px;}
+		li#nav-about a				{ left:437px; width:48px;  background-position:-437px 0px;}
+	
+		li#nav-student_success a:hover    	{ background-position:0px -14px;}
+		li#nav-campus_life a:hover     		{ background-position:-109px -14px;}
+		li#nav-health_and_safety a:hover	{ background-position:-202px -14px;}
+		li#nav-parents a:hover				{ background-position:-326px -14px;}
+		li#nav-staff a:hover				{ background-position:-390px -14px;}
+		li#nav-about a:hover				{ background-position:-437px -14px;}
+	}
+	
+}

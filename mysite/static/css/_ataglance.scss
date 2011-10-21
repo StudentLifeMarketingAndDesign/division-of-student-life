@@ -1,0 +1,53 @@
+#at-a-glance {
+	-moz-transform:rotate(1deg);
+	-webkit-transform:rotate(1deg);
+	-o-transform:rotate(1deg);
+	
+	h1, h2, h3, h4, p, ul {
+		-moz-transform:rotate(-1deg);
+		-webkit-transform:rotate(-1deg);
+		-o-transform:rotate(-1deg);		
+	}
+	
+	h2 {
+		font-family:'Yanone Kaffeesatz', Arial, sans serif;
+		margin-bottom:20px;
+		font-size:2.4em;
+	}
+	
+	h4 {
+		margin-bottom:0;
+		font-size:1em;
+		font-weight:bold;
+	}
+	
+	ul {
+		margin-top:0;
+	}
+	
+	#employees {
+		background-image:url('/images/ataglance-employees.png');
+		background-repeat:no-repeat;
+		background-position:center left;
+		padding-left:90px;
+	}
+	
+	#facilities {
+		background-image:url('/images/ataglance-facilities.png');
+		background-repeat:no-repeat;
+		background-position:top right;
+		padding-right:80px;
+		padding-left:10px;
+	}
+	
+	#budget {
+		background-image:url('/images/ataglance-budget.png');
+		background-repeat:no-repeat;
+		background-position:40px 0;
+		padding-left:100px;
+		height:80px;
+	}
+
+}
+
+

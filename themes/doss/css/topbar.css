@@ -1,0 +1,87 @@
+ul#univ-nav li .sub {
+	position: absolute; /*--Important--*/
+	top: 28px; left: -285px;
+	z-index: 99999;
+	
+	
+	background: #333333; /* old browsers */
+	background: -moz-linear-gradient(top, #333333 0%, #000000 99%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#333333), color-stop(99%,#000000)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#000000',GradientType=0 ); /* ie */
+	
+	padding: 10px 10px 10px;
+	float: left;
+	/*--Bottom right rounded corner--*/
+	-moz-border-radius-bottomright: 5px;
+	-khtml-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	/*--Bottom left rounded corner--*/
+	-moz-border-radius-bottomleft: 5px;
+	-khtml-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	 display: none; /*--Hidden for those with js turned off--*/
+}
+ul#univ-nav li .row { /*--If needed to break out into rows--*/
+	clear: both;
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+ul#univ-nav li .sub ul{
+	list-style: none;
+	margin: 0; padding: 0;
+	width: 174px;
+	float: left;
+}
+ul#univ-nav .sub ul li {
+	width: 100%; /*--Override parent list item--*/
+	color: #fff;
+	border: none;
+}
+ul#univ-nav .sub ul li h2 { /*--Sub nav heading style--*/
+	padding: 0;  margin: 0;
+	font-size: 1.3em;
+	font-weight: normal;
+}
+ul#univ-nav .sub ul li h2 a { /*--Sub nav heading link style--*/
+	padding: 5px 0;
+	background-image: none;
+	color: #e8e000;
+}
+
+ul#univ-nav h2 {
+	color: white;
+	font-size: 16px;
+	
+
+}
+ul#univ-nav .sub ul li a {
+	float: none;
+	text-indent: 0; /*--Override text-indent from parent list item--*/
+	height: auto; /*--Override height from parent list item--*/
+	background: url(navlist_arrow.png) no-repeat 5px 12px;
+	padding: 5px 5px 5px 5px;
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	font-size: 13px;
+}
+ul#univ-nav .sub ul li a:hover {
+	color: #ddd;
+	background-position: 5px 12px ;/*--Override background position--*/
+}
+
+#univ-nav li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	
+}
+
+.subnav-separator {
+	height: 3px;
+	width: 100%;
+	background-color: #cba636;
+	margin: 3px 0;
+}

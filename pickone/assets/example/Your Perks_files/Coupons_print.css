@@ -1,0 +1,24 @@
+/* coupons print view */
+
+#header {
+	display: none;
+}
+
+#footer {
+	display: none;
+
+}
+
+#picksmenu {
+	display: none;
+}
+
+#content {
+	width: 100%;
+
+}
+
+#background-wrapper{
+	background: none;
+
+}

@@ -1,0 +1,29 @@
+.post {
+	
+	padding-top:1.4em;
+	border-bottom:1px solid #fff;
+	
+	.post-header {
+		margin-bottom:0.2em;
+		
+		
+		a:hover {
+			text-decoration:none;
+		}
+	}
+	
+	p.post-details {
+		color:#777;
+		font-size:0.9em;
+	}
+	
+	p.post-read-more {
+		
+	}
+	
+	div.post-content {
+		font-family:Georgia, sans-serif;
+		font-size:1.2em;
+	}
+	
+}

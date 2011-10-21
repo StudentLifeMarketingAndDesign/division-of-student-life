@@ -1,0 +1,769 @@
+/* --------------------------------------------------------------
+
+   reset.css
+   * Resets default browser CSS.
+
+-------------------------------------------------------------- */
+html {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+/* This helps to make newer HTML5 elements behave like DIVs in older browers */
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+  display: block; }
+
+/* Line-height should always be unitless! */
+body {
+  line-height: 1.5;
+  background: white; }
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+/* float:none prevents the span-x classes from breaking table-cell display */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  float: none !important; }
+
+table, th, td {
+  vertical-align: middle; }
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: ''; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+/* Remove annoying border on linked images. */
+a img {
+  border: none; }
+
+/* Remember to define your own focus styles! */
+:focus {
+  outline: 0; }
+
+/* --------------------------------------------------------------
+
+   * Sets up some sensible default typography.
+
+-------------------------------------------------------------- */
+/* Default font settings.
+   The font-size percentage is of 16px. (0.75 * 16px = 12px) */
+html {
+  font-size: 100.01%; }
+
+body {
+  font-size: 75%;
+  color: #333;
+  background: #666666;
+  background-image: url("/images/background.png");
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+/* Headings
+-------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  color: #111; }
+
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em; }
+
+h2 {
+  font-size: 1.8em;
+  line-height: 1;
+  margin-bottom: 0.5em; }
+
+h3 {
+  font-size: 1.4em;
+  line-height: 1;
+  margin-bottom: 1em; }
+
+h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em; }
+
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em; }
+
+h6 {
+  font-size: 1em;
+  font-weight: bold; }
+
+h1 img, h2 img, h3 img,
+h4 img, h5 img, h6 img {
+  margin: 0; }
+
+/* Text elements
+-------------------------------------------------------------- */
+p {
+  margin: 0 0 1.5em; }
+
+/* 
+	These can be used to pull an image at the start of a paragraph, so 
+	that the text flows around it (usage: <p><img class="left">Text</p>) 
+ */
+.left {
+  float: left !important; }
+
+p .left {
+  margin: 1.5em 1.5em 1.5em 0;
+  padding: 0; }
+
+.right {
+  float: right !important; }
+
+p .right {
+  margin: 1.5em 0 1.5em 1.5em;
+  padding: 0; }
+
+a:focus,
+a:hover {
+  color: #2f63a8;
+  text-decoration: underline; }
+
+a {
+  color: #183152;
+  text-decoration: none; }
+
+blockquote {
+  margin: 1.5em;
+  color: #666;
+  font-style: italic; }
+
+strong, dfn {
+  font-weight: bold; }
+
+em, dfn {
+  font-style: italic; }
+
+sup, sub {
+  line-height: 0; }
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666; }
+
+address {
+  margin: 0 0 1.5em;
+  font-style: italic; }
+
+del {
+  color: #666; }
+
+pre {
+  margin: 1.5em 0;
+  white-space: pre; }
+
+pre, code, tt {
+  font: 1em 'andale mono', 'lucida console', monospace;
+  line-height: 1.5; }
+
+/* Lists
+-------------------------------------------------------------- */
+li ul,
+li ol {
+  margin: 0; }
+
+ul, ol {
+  margin: 0 1.5em 1.5em 0;
+  padding-left: 1.5em; }
+
+ul {
+  list-style-type: disc; }
+
+ol {
+  list-style-type: decimal; }
+
+dl {
+  margin: 0 0 1.5em 0; }
+
+dl dt {
+  font-weight: bold; }
+
+dd {
+  margin-left: 1.5em; }
+
+/* Tables
+-------------------------------------------------------------- */
+/* 
+	Because of the need for padding on TH and TD, the vertical rhythm 
+	on table cells has to be 27px, instead of the standard 18px or 36px 
+	of other elements. 
+ */
+table {
+  margin-bottom: 1.4em;
+  width: 100%; }
+
+th {
+  font-weight: bold; }
+
+thead th {
+  background: #c3d9ff; }
+
+th, td, caption {
+  padding: 4px 10px 4px 5px; }
+
+/*
+	You can zebra-stripe your tables in outdated browsers by adding 
+	the class "even" to every other table row. 
+ */
+tbody tr:nth-child(even) td,
+tbody tr.even td {
+  background: #e5ecf9; }
+
+tfoot {
+  font-style: italic; }
+
+caption {
+  background: #eee; }
+
+/* Misc classes
+-------------------------------------------------------------- */
+.small {
+  font-size: .8em;
+  margin-bottom: 1.875em;
+  line-height: 1.875em; }
+
+.large {
+  font-size: 1.2em;
+  line-height: 2.5em;
+  margin-bottom: 1.25em; }
+
+.hide {
+  display: none; }
+
+.quiet {
+  color: #666; }
+
+.loud {
+  color: #000; }
+
+.highlight {
+  background: #ff0; }
+
+.added {
+  background: #060;
+  color: #fff; }
+
+.removed {
+  background: #900;
+  color: #fff; }
+
+.first {
+  margin-left: 0;
+  padding-left: 0; }
+
+.last {
+  margin-right: 0;
+  padding-right: 0; }
+
+.top {
+  margin-top: 0;
+  padding-top: 0; }
+
+.bottom {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+
+.shadow {
+  -moz-box-shadow: 0 3px 5px #222;
+  -webkit-box-shadow: 0 3px 5px #222;
+  box-shadow: 0 3px 5px #222; }
+
+.boldlink {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.0em;
+  color: #375d81; }
+
+.container {
+  margin: auto;
+  width: 960px; }
+
+.container-feature {
+  margin: auto;
+  width: 990px; }
+
+.clearfix {
+  clear: both; }
+
+#header {
+  background-color: #000;
+  border-top: 5px solid #ffce39; }
+  #header h1 {
+    float: left;
+    margin: 10px 0;
+    padding: 0;
+    line-height: 1.2em;
+    font-size: 1.0em;
+    font-weight: bold;
+    color: #ffce39; }
+    #header h1 a {
+      color: #ffce39; }
+    #header h1 span {
+      color: #fff;
+      margin-left: 10px; }
+      #header h1 span a {
+        color: #fff; }
+  #header ul {
+    margin: 10px 0;
+    padding: 0;
+    float: right; }
+    #header ul li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: inline;
+      border-right: 1px solid #666;
+      padding-left: 5px;
+      padding-right: 5px; }
+      #header ul li a {
+        font-size: 0.9em;
+        line-height: 1.2em;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #999; }
+      #header ul li a:hover {
+        color: #fff; }
+    #header ul li#univ-nav-all {
+      border-right: none;
+      padding-right: 0; }
+      #header ul li#univ-nav-all a {
+        text-transform: none; }
+
+#navigation {
+  height: 95px;
+  background: url("/images/logo.png");
+  background-repeat: no-repeat;
+  background-position: 20px 30px;
+  overflow: hidden; }
+  #navigation ul {
+    height: 14px;
+    position: relative;
+    margin: 71px 0 0 475px;
+    padding: 0; }
+    #navigation ul li {
+      list-style: none;
+      position: absolute;
+      top: 0;
+      margin: 0;
+      padding: 0; }
+    #navigation ul li, #navigation ul a {
+      display: block;
+      height: 14px; }
+    #navigation ul a {
+      position: absolute;
+      display: block;
+      background: url("/images/nav-sprite.png") no-repeat top right;
+      height: 0;
+      padding-top: 14px;
+      overflow: hidden; }
+    #navigation ul li#nav-student_success a {
+      left: 0px;
+      width: 109px;
+      background-position: 0px 0px; }
+    #navigation ul li#nav-campus_life a {
+      left: 109px;
+      width: 93px;
+      background-position: -109px 0px; }
+    #navigation ul li#nav-health_and_safety a {
+      left: 202px;
+      width: 124px;
+      background-position: -202px 0px; }
+    #navigation ul li#nav-parents a {
+      left: 326px;
+      width: 64px;
+      background-position: -326px 0px; }
+    #navigation ul li#nav-staff a {
+      left: 390px;
+      width: 47px;
+      background-position: -390px 0px; }
+    #navigation ul li#nav-about a {
+      left: 437px;
+      width: 48px;
+      background-position: -437px 0px; }
+    #navigation ul li#nav-student_success a:hover {
+      background-position: 0px -14px; }
+    #navigation ul li#nav-campus_life a:hover {
+      background-position: -109px -14px; }
+    #navigation ul li#nav-health_and_safety a:hover {
+      background-position: -202px -14px; }
+    #navigation ul li#nav-parents a:hover {
+      background-position: -326px -14px; }
+    #navigation ul li#nav-staff a:hover {
+      background-position: -390px -14px; }
+    #navigation ul li#nav-about a:hover {
+      background-position: -437px -14px; }
+
+#feature {
+  height: 365px;
+  overflow: hidden; }
+
+#feature-tabs {
+  width: 496px;
+  height: 365px;
+  float: left;
+  background-image: url("/images/feature-slide1.png");
+  background-repeat: no-repeat;
+  background-position: top left; }
+  #feature-tabs ul#feature-tabs-list {
+    margin: 18px 0 0 20px;
+    padding: 0; }
+    #feature-tabs ul#feature-tabs-list li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 29px;
+      float: left; }
+      #feature-tabs ul#feature-tabs-list li a {
+        display: block;
+        height: 0;
+        width: 105px;
+        padding-top: 29px;
+        overflow: hidden; }
+  #feature-tabs .feature-content {
+    margin-left: 35px;
+    padding-top: 30px;
+    width: 445px;
+    height: 265px;
+    overflow: hidden;
+    font-family: Georgia, serif;
+    color: #666;
+    font-size: 1.2em;
+    line-height: 1.2em; }
+    #feature-tabs .feature-content h1 {
+      font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+      font-size: 2em;
+      margin-bottom: 0.5em; }
+    #feature-tabs .feature-content p {
+      margin: 0.7em 0; }
+
+#feature-image {
+  width: 494px;
+  height: 365px;
+  float: left;
+  background-image: url("/images/feature-photo_back.png");
+  background-repeat: no-repeat;
+  background-position: top left; }
+  #feature-image img {
+    margin: 28px 0 0 10px; }
+
+#news-footer {
+  padding-top: 1.2em; }
+  #news-footer ul {
+    margin: 0;
+    padding: 0; }
+    #news-footer ul li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline; }
+    #news-footer ul li#news-footer-browse {
+      padding-right: 10px;
+      border-right: 1px solid #999; }
+    #news-footer ul li#news-footer-vp_blog {
+      padding-left: 7px; }
+
+.sidebar {
+  float: right;
+  width: 300px;
+  margin-top: 20px; }
+
+.side-box {
+  margin-bottom: 20px;
+  color: #fff; }
+  .side-box h3 {
+    font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+    font-size: 2em;
+    margin: 0 0 0.4em 0;
+    padding: 0;
+    color: #fff; }
+
+/* Sidebox feature											*/
+/* ======================================================== */
+.side-feature {
+  background-color: #ffffcc;
+  width: 300px;
+  margin-left: -15px;
+  padding: 15px;
+  margin-bottom: 20px; }
+
+/* Newsletter signup 										*/
+/* ======================================================== */
+#newsletter-signup #newsletter-field {
+  width: 222px;
+  /* 234 width minus 12px padding */
+  float: left;
+  margin-right: 5px; }
+
+/* Twitter List		 										*/
+/* ======================================================== */
+#twitter {
+  border-bottom: 1px solid #777; }
+
+.twitter-post {
+  border-top: 1px solid #777;
+  padding-top: 0.6em; }
+  .twitter-post .avatar {
+    width: 48px;
+    float: left; }
+  .twitter-post .tweet {
+    margin-left: 58px; }
+    .twitter-post .tweet p {
+      margin-bottom: 0.6em; }
+    .twitter-post .tweet p.account {
+      margin: 0;
+      padding: 0;
+      color: #999; }
+  .twitter-post a {
+    color: #ffce39; }
+
+.content {
+  padding: 20px;
+  margin: 20px 0;
+  background-image: url("/images/background-news.png"); }
+
+.content.twothirds {
+  float: left;
+  width: 590px; }
+
+.content-header {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px; }
+
+.content h1 {
+  font-family: 'Yanone Kaffeesatz', Arial, sans-serif; }
+
+.content h2 {
+  color: #183152; }
+
+/* ======================================================== */
+.section-container {
+  clear: both; }
+
+.section {
+  width: 445px;
+  float: left;
+  margin: 0 30px 20px 0; }
+
+.section-content {
+  padding: 10px 10px 0 10px; }
+
+.last {
+  margin-right: 0; }
+
+#footer {
+  clear: both;
+  border-top: 5px solid #ffce39;
+  background-color: #000; }
+
+#footer-header {
+  padding: 15px 0; }
+  #footer-header p {
+    float: left; }
+  #footer-header #footer-search {
+    float: right;
+    width: 288px;
+    background-color: #fff;
+    padding: 7px 5px; }
+    #footer-header #footer-search input#search {
+      border: 0;
+      padding: 0;
+      margin: 0;
+      float: left;
+      width: 268px; }
+    #footer-header #footer-search input#search-submit {
+      float: left; }
+
+#footer-nav {
+  width: 630px;
+  float: left; }
+  #footer-nav ul {
+    margin: 0 0 20px 0;
+    padding: 0;
+    float: left;
+    width: 200px; }
+    #footer-nav ul li {
+      margin: 0 0.2em;
+      padding: 0;
+      list-style: none; }
+      #footer-nav ul li a {
+        color: #999; }
+    #footer-nav ul li.footer-nav-header a {
+      color: #ffce39;
+      font-weight: bold; }
+
+#footer-contact {
+  margin-left: 660px;
+  color: #fff; }
+  #footer-contact a {
+    color: #fff; }
+  #footer-contact .org {
+    color: #ffce39;
+    font-weight: bold; }
+  #footer-contact #footer-address {
+    margin-bottom: 40px; }
+  #footer-contact #copyright, #footer-contact #copyright a {
+    color: #999;
+    font-size: 0.9em; }
+
+.post {
+  padding-top: 1.4em;
+  border-bottom: 1px solid #fff; }
+  .post .post-header {
+    margin-bottom: 0.2em; }
+    .post .post-header a:hover {
+      text-decoration: none; }
+  .post p.post-details {
+    color: #777;
+    font-size: 0.9em; }
+  .post div.post-content {
+    font-family: Georgia, sans-serif;
+    font-size: 1.2em; }
+
+input[type=text], input[type=password],
+input.text, input.title,
+textarea {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 7px 5px;
+  font-size: 1.0em; }
+
+input[type=text]:focus, input[type=password]:focus,
+input.text:focus, input.title:focus,
+textarea:focus {
+  border-color: #999; }
+
+select {
+  background-color: #fff;
+  border-width: 1px;
+  border-style: solid; }
+
+input[type=text], input[type=password],
+input.text, input.title,
+textarea, select {
+  margin: 0; }
+
+/* Buttons												 	*/
+/* ======================================================== */
+.button, .button:visited {
+  border: none;
+  background: #02679a url(/images/overlay.png) repeat-x;
+  display: inline-block;
+  margin: 0;
+  padding: 5px 10px 6px;
+  text-decoration: none;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25); }
+
+/* Sidebar forms										 	*/
+/* ======================================================== */
+.sidebar input[type=text], .sidebar input[type=password],
+.sidebar input.text, .sidebar input.title,
+.sidebar textarea {
+  width: 288px;
+  margin-bottom: 10px; }
+.sidebar textarea {
+  height: 120px; }
+
+.photo {
+  border: 10px solid #fff;
+  -moz-box-shadow: 0 2px 4px #666;
+  -webkit-box-shadow: 0 2px 4px #666;
+  box-shadow: 0 2px 4px #666; }
+
+img.left {
+  margin: 0 20px 20px 0; }
+
+img.right {
+  margin: 0 0 20px 20px; }
+
+#at-a-glance {
+  -moz-transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+  -o-transform: rotate(1deg); }
+  #at-a-glance h1, #at-a-glance h2, #at-a-glance h3, #at-a-glance h4, #at-a-glance p, #at-a-glance ul {
+    -moz-transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg); }
+  #at-a-glance h2 {
+    font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+    margin-bottom: 20px;
+    font-size: 2.4em; }
+  #at-a-glance h4 {
+    margin-bottom: 0;
+    font-size: 1em;
+    font-weight: bold; }
+  #at-a-glance ul {
+    margin-top: 0; }
+  #at-a-glance #employees {
+    background-image: url("/images/ataglance-employees.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 90px; }
+  #at-a-glance #facilities {
+    background-image: url("/images/ataglance-facilities.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    padding-right: 80px;
+    padding-left: 10px; }
+  #at-a-glance #budget {
+    background-image: url("/images/ataglance-budget.png");
+    background-repeat: no-repeat;
+    background-position: 40px 0;
+    padding-left: 100px;
+    height: 80px; }
+
+.intro {
+  width: 395px;
+  height: 220px;
+  margin-bottom: -20px;
+  padding: 50px 595px 0px 30px;
+  overflow: hidden; }
+  .intro h1 {
+    font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+    font-size: 3.8em;
+    margin-bottom: 10px; }
+
+#campus_life_intro {
+  background-image: url("/images/section-campuslife.jpg");
+  background-repeat: no-repeat; }

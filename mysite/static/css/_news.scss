@@ -1,0 +1,24 @@
+#news-footer {
+	padding-top:1.2em;
+	
+	ul {
+		margin:0;
+		padding:0;
+		
+		li {
+			list-style:none;
+			margin:0;
+			padding:0;
+			display:inline;
+		}
+		
+		li#news-footer-browse {
+			padding-right:10px;
+			border-right:1px solid #999;
+		}
+		
+		li#news-footer-vp_blog {
+			padding-left:7px;
+		}
+	}
+}

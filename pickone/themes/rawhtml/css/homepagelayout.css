@@ -1,0 +1,160 @@
+body {
+	background-color: #3b2b1c;
+	background-repeat: repeat-x;
+	margin: 0;
+}
+
+#background-wrapper {
+	background-image: url(../images/background.jpg);
+	background-repeat: repeat;
+
+}
+
+#tagline-wrapper{
+	width: 1000px;
+	margin: auto;
+	padding: 30px 0;
+}
+
+#body-background-wrapper{
+	background-image: url(../images/orange_background.jpg);
+	padding: 30px 0;
+	border-top: 3px solid;
+	border-top-color: #a45027;
+	border-top-color: rgba(153, 77, 39, 0.6);
+	
+
+}
+
+#studentlifelogo {
+	float: right;
+
+}
+
+
+#pickonelogo {
+	display: block;
+	float: left;
+
+}
+
+
+#header {
+	 background-image: url(../images/clouds_home.png); 
+	background-repeat: repeat-x;
+	height: 253px;
+	width: auto;
+	padding: 0;
+	margin: 0;
+	/*-moz-box-shadow: -20px 13px 13px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0px 13px 13px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 13px 13px rgba(0, 0, 0, 0.25);*/
+	position: relative;
+	
+}
+
+#header img {
+	/*margin-top: 30px;*/
+	margin: 0;
+	padding: 0;
+}
+
+#header-content{
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+
+}
+
+#header-content h1 {
+	display: inline;
+	float: left;
+
+
+}
+
+#header-nav{
+	float: right;
+	margin-top: 15px;
+
+}
+
+#uiowalogo{
+	position: absolute;
+	display: block;
+
+}
+
+#nav{
+	list-style-type: none;
+	margin-top: 40px;
+	padding: 0;
+}
+
+#nav li {
+
+	float: left;
+
+
+}
+
+#nav li a, #nav li span{
+	padding-left: 32px;
+	padding-right: 32px;
+}
+
+#nav .first{
+	padding-left: 0px;
+}
+
+
+.clear-left {
+	clear: left;
+}
+
+#content-wrapper {
+	width: 1000px;
+	margin: auto;
+/*	min-height: 1000px; */
+/*	margin-top: 25px; */
+}
+
+#content {
+	width: 935px;
+	padding: 30px;
+	background-color: rgba(100,37,20, 0.33);
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	/*background: transparent; */
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#54642514,endColorstr=#54642514)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#54642514,endColorstr=#54642514);   /* IE6 & 7 */
+      zoom: 1;
+      background-image: url(../images/pickonebgimage.png);
+      background-repeat: no-repeat;
+      background-position: 510px 40px;
+      
+
+
+}
+
+
+#footer {
+	background: #081d25;
+	min-height: 100px;
+
+
+}
+
+#footer-content{
+	padding-top: 22px;
+	padding-bottom: 22px;
+	width: 1000px;
+	margin:auto;
+
+}
+
+
+
+

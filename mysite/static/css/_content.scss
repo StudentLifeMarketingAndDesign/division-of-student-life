@@ -1,0 +1,50 @@
+.content {
+	padding:20px;
+	margin:20px 0;
+	background-image:url('/images/background-news.png');
+}
+
+.content.twothirds {
+	float:left;
+	width:590px;
+}
+
+.content.full {
+	
+}
+
+.content-header {
+	border-bottom:1px solid #fff;
+	padding-bottom:10px;
+}
+
+.content h1 {
+	font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+}
+
+.content h2 {
+	color:$blue;
+}
+
+
+
+/* ======================================================== */
+
+.section-container {
+	clear:both;
+}
+
+.section {
+	width:445px;
+	float:left;
+	margin:0 30px 20px 0;
+}
+
+.section-content {
+	padding:10px 10px 0 10px;
+}
+
+.last {
+	margin-right:0;
+}
+
