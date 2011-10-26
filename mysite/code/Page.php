@@ -67,7 +67,7 @@ class Page_Controller extends ContentController {
     }
 
 	public function getAssessments($number = 0, $start = 0){
-		$assessmentSet = DataObject::get("AssessmentReportPage", null, null, null, "$start, $number");
+		$assessmentSet = DataObject::get("AssessmentReportPage", null, $sort = "PublishedDate DESC", null, "$start, $number");
 		
 		if($assessmentSet)
 			return $assessmentSet;

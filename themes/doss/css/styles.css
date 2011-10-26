@@ -1662,11 +1662,91 @@ margin: 0;
 
 #feed-sidebar h3 {
 	margin-bottom: 0;
-
-
 }
 
 #feed-sidebar a {
 	font-weight: bold;
 	color: #2f63a8
+}
+
+#annual-report.content {
+	padding: 0;
+}
+
+#annual-report-header {
+	padding: 20px;
+	color: white;
+}
+
+#annual-report-header {
+
+}
+#annual-report-content {
+	padding: 20px;
+}
+
+.annual-report-nav {
+	float: left;
+	margin-top: 20px;
+}
+.annual-report-nav ul{
+	margin: 0;
+	padding: 0;
+}
+
+.annual-report-nav li {
+	list-style-type: none;
+	padding: 0;
+	background: #b3b2b1;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	-moz-box-shadow: inset 2px 0px 3px #333;
+	-webkit-box-shadow: inset 2px 0px 3px #333;
+	box-shadow: inner 2px 0px 3px #333;
+	margin: 10px 0;
+}
+
+.annual-report-nav li.odd {
+	background: #b3b2b1;
+}
+.annual-report-nav li.even {
+	background: #dbdad9;
+}
+.annual-report-nav a {
+	padding: 10px;
+	color: #005b82;
+	width: 280px;
+	display: block;
+	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+	font-size: 28px;
+	text-align: right;
+}
+
+.annual-report-nav a span {
+	padding: 16px;
+}
+#annual-report-content h1 {
+	color: white;
+	font-weight: normal;
+}
+#annual-report-content h2 {
+	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+	font-size: 28px;
+	font-weight: normal;
+	color: white;
+}
+
+#annual-report-content p {
+	font-size: 16px;
+	color: #3a3c3c;
+}
+
+.annual-report-header-context {
+	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+	font-size: 23px;
+	color: #005b7f;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 2px;
+	margin-bottom: 5px;
+	display: block;
 }

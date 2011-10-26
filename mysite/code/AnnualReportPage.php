@@ -1,7 +1,11 @@
 <?php
-class AssessmentToolsPage extends Page {
+class AnnualReportPage extends Page {
 
 	public static $db = array(
+
+		"Cover" => "Boolean",
+		"BackgroundColor" => "Text"
+		
 	
 	);
 	
@@ -12,30 +16,30 @@ class AssessmentToolsPage extends Page {
 	);
 	
 	public static $has_one = array(
-		/*"Image" => "Image"*/
+		"Image" => "Image"
 	);
 	
 	/*public static $allowed_children = array(
-		"AssessmentCoordinatorProfile"
+	
 		
 	
 	);*/
 	
 	function getCMSFields() { 
-	
+		
+		$backgroundOptions = array ("#D39841" => "orange");
+		
 		$fields = parent::getCMSFields();
-		
-		/*$calendarField = new DateField("PublishedDate","Published Date");
-		$calendarField->setConfig('showcalendar', true);		*/
-		
 		$fields->removeFieldFromTab('Root.Content.Main', "Sidebar");
 		$fields->removeFieldFromTab('Root.Content.Main', "Image");
-		//$fields->removeFieldFromTab('Root.Content.Main', "Content");
+		$fields->removeFieldFromTab('Root.Content.Main', "Content");
+		$fields->addFieldToTab('Root.Content.Main', new CheckboxField('Cover','This is the cover page for the report'));
+		$fields->addFieldToTab('Root.Content.Main', new DropdownField('BackgroundColor','Background Color:', $backgroundOptions));
+			
+		$fields->addFieldToTab('Root.Content.Main', new ImageField('Image','Main Image (optional)'));
+
 	
-		//$fields->addFieldToTab('Root.Content.Main', $calendarField);
-		//$fields->addFieldToTab('Root.Content.Main', "Content");
-	
-		/*$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField("Content"));*/
+		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField("Content"));
 
 		
 		/*$fields->addFieldToTab('Root.Content.Main', new ImageField('HeaderImage','Header Image'));*/
@@ -46,8 +50,19 @@ class AssessmentToolsPage extends Page {
 
 }
 
-class AssessmentToolsPage_Controller extends Page_Controller {
+class AnnualReportPage_Controller extends Page_Controller {
 
+	public function AnnualReportPages() {
+		$annual_report_pages = DataObject::get("AnnualReportPage", null, $sort = "Sort DESC");
+		
+		if($annual_report_pages){
+			return $annual_report_pages;
+		}else{
+			return false;
+		}
+	
+	
+	}
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
 	 * permissions or conditions required to allow the user to access it.
@@ -63,8 +78,8 @@ class AssessmentToolsPage_Controller extends Page_Controller {
 	 *
 	 * @var array
 	 */
-	public static $allowed_actions = array (
-	);
+	/*public static $allowed_actions = array (
+	);*/
 
 	public function init() {
 		parent::init();
