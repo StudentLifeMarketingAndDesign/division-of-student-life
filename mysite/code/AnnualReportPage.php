@@ -19,15 +19,17 @@ class AnnualReportPage extends Page {
 		"Image" => "Image"
 	);
 	
-	/*public static $allowed_children = array(
+	public static $allowed_children = array(
+	
+		"AnnualReportPage"
 	
 		
 	
-	);*/
+	);
 	
 	function getCMSFields() { 
 		
-		$backgroundOptions = array ("#D39841" => "orange");
+		$backgroundOptions = array ("#D39841" => "Orange", "#e9e9e9" => "White / Gray", "#FFC", "Light Yellow", );
 		
 		$fields = parent::getCMSFields();
 		$fields->removeFieldFromTab('Root.Content.Main', "Sidebar");

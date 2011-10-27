@@ -1,6 +1,6 @@
 	
 <div class="container">
-<div id="annual-report" class="content twothirds shadow" style="background: #d39841;">
+<div id="annual-report" class="content shadow" style="background: #d39841;">
 	<% if Cover %>
 	<div id="annual-report-header">
 	
@@ -12,7 +12,7 @@
 
 		
 		<% if Image %>
-			<% control Image.SetWidth(590) %><img src="$URL" alt="Feature Photo" /><% end_control %>
+			<% control Image.SetWidth(650) %><img src="$URL" alt="Feature Photo" /><% end_control %>
 		<% end_if %>
 		
 		<div id="annual-report-content">
@@ -24,15 +24,29 @@
 			<h1 class="annual-report-header">$Title</h1>
 			<% end_if %>
 			$Content
+			
+			<% if Cover %>
+				<h3>Table of Contents</h3>
+				<ul>
+					<% control AnnualReportPages %>
+					
+					<li><a href="$Link">$MenuTitle</a></li>
+					<% end_control %>
+				
+				 
+				</ul>
+			
+			<% end_if %>
+			
 		</div>
 		$Form
-		
+		<! something here -->
 		
 </div>
 	<div class="annual-report-nav">
 		<ul>
 			<% control AnnualReportPages %>
-			<li class="$EvenOdd"><a href="$Link"><span>$MenuTitle</span></a></li>
+			<li class="$LinkOrCurrent"><a href="$Link">$MenuTitle</a></li>
 			
 			<% end_control %>
 		

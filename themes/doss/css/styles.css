@@ -1669,8 +1669,11 @@ margin: 0;
 	color: #2f63a8
 }
 
+
 #annual-report.content {
 	padding: 0;
+	width: 650px;
+	float: left;
 }
 
 #annual-report-header {
@@ -1704,13 +1707,20 @@ margin: 0;
 	-webkit-box-shadow: inset 2px 0px 3px #333;
 	box-shadow: inner 2px 0px 3px #333;
 	margin: 10px 0;
+	list-style-image: none;
 }
 
-.annual-report-nav li.odd {
-	background: #b3b2b1;
-}
-.annual-report-nav li.even {
+.annual-report-nav li.current {
 	background: #dbdad9;
+	float: none;
+	width: auto;
+	filter: none;
+	-ms-filter: none;
+}
+.annual-report-nav li.link {
+	float: none;
+	background: #b3b2b1;
+	width: auto;
 }
 .annual-report-nav a {
 	padding: 10px;
@@ -1720,6 +1730,7 @@ margin: 0;
 	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
 	font-size: 28px;
 	text-align: right;
+	font-weight: normal;
 }
 
 .annual-report-nav a span {
@@ -1728,25 +1739,63 @@ margin: 0;
 #annual-report-content h1 {
 	color: white;
 	font-weight: normal;
+	font-size: 52px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 12px;
+	margin-bottom: 15px;
+
 }
+
+#annual-report-content a {
+	font-weight: bold;
+	color: #003448;
+
+}
+
+
 #annual-report-content h2 {
 	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
-	font-size: 28px;
+	font-size: 36px;
 	font-weight: normal;
-	color: white;
+	color: #005B7F;
+}
+
+#annual-report-content h3 {
+
+	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+	font-size: 28px;
+	color: #003448;
+	margin: 10px 0;
 }
 
 #annual-report-content p {
-	font-size: 16px;
+	font-size: 14px;
 	color: #3a3c3c;
+}
+
+#annual-report-content blockquote {
+	font-weight: bold;
+}
+
+#annual-report-content ul, #annual-report-content ol {
+	margin-left: 25px;
+
+}
+
+#annual-report-content li {
+	font-size: 14px;
+}
+
+#annual-report-content img {
+  -moz-box-shadow: 0 3px 5px #222;
+  -webkit-box-shadow: 0 3px 5px #222;
+  box-shadow: 0 3px 5px #222;
+
 }
 
 .annual-report-header-context {
 	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
 	font-size: 23px;
 	color: #005b7f;
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 2px;
-	margin-bottom: 5px;
 	display: block;
 }
