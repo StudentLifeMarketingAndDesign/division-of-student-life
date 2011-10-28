@@ -1,6 +1,17 @@
+<% if BackgroundColor = #e9e9e9 %>
+	<style>
+		#annual-report-content h1{
+		
+			color: #003448;
+		
+		}
 	
+	
+	</style>
+
+<% end_if %>
 <div class="container">
-<div id="annual-report" class="content shadow" style="background: #d39841;">
+<div id="annual-report" class="content shadow" style="background: $BackgroundColor">
 	<% if Cover %>
 	<div id="annual-report-header">
 	

@@ -29,7 +29,7 @@ class AnnualReportPage extends Page {
 	
 	function getCMSFields() { 
 		
-		$backgroundOptions = array ("#D39841" => "Orange", "#e9e9e9" => "White / Gray", "#FFC", "Light Yellow", );
+		$backgroundOptions = array ("#D39841" => "Orange", "#e9e9e9" => "White / Gray", "#FFC" => "Light Yellow", );
 		
 		$fields = parent::getCMSFields();
 		$fields->removeFieldFromTab('Root.Content.Main', "Sidebar");
