@@ -1,4 +1,4 @@
-<% if BackgroundColor = #e9e9e9 %>
+<% if BackgroundColor = e9e9e9 %>
 	<style>
 		#annual-report-content h1{
 		
