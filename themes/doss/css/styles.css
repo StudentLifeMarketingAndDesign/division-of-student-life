@@ -1586,13 +1586,11 @@ margin: 0;
 .assessment-coordinator {
 	min-height: 93px;
 	padding: 20px;
-	background-color: #f3f2d5;
+	background-image: url(../images/coordinator_bg.png);
 	margin: 10px 0;
 	margin-right: 15px;
 	width: 240px;
 	float: left;
-
-
 }
 
 .all-assessments-link {
@@ -1623,6 +1621,11 @@ margin: 0;
 	margin-top: 0;
 	padding-top: 0;
 	color: #2F63A8;
+}
+
+.assessment-coordinator h3, .assessment-coordinator h3 a {
+	color: #275086;
+
 }
 
 #feed-sidebar {

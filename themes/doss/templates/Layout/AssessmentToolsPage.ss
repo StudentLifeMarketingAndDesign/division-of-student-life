@@ -14,10 +14,15 @@
 		<% if AssessmentCoordinators %>
 			
 			<% control AssessmentCoordinators %>
-			<h2>$Title</h2>
-			$Content
-		
+			<div class="assessment-coordinator shadow">
+			<% if ExternalURL %>
+				<h3><a href="$ExternalURL">$Title</a></h3>
+			<% else %>
+				<h3>$Title</h3>
+			<% end_if %>
+			<strong>$Content</strong>
 			
+			</div>
 			
 	
 			
