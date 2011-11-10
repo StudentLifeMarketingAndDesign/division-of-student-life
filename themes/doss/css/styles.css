@@ -1778,6 +1778,15 @@ margin: 0;
 
 #annual-report-content blockquote {
 	font-weight: bold;
+	margin:0;
+	padding:0 20px;
+	background-image:url('../images/quotemarks.png');
+	background-repeat:no-repeat;
+}
+
+#annual-report-content blockquote img.portrait {
+	float:right;
+	margin:0 0 20px 20px;
 }
 
 #annual-report-content ul, #annual-report-content ol {
