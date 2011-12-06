@@ -50,6 +50,7 @@
 			<% if Cover %>
 				<h3>Table of Contents</h3>
 				<ul class="annual-report-toc">
+
 					<% control AnnualReportPages %>
 					
 					<li><a href="$Link">$MenuTitle</a></li>
@@ -67,6 +68,11 @@
 </div>
 	<div class="annual-report-nav">
 		<ul>
+			
+			<% control AnnualReportCover %>
+			<li class="$LinkOrCurrent"><a href="$Link">$MenuTitle</a></li>
+
+			<% end_control %>
 			<% control AnnualReportPages %>
 			<li class="$LinkOrCurrent"><a href="$Link">$MenuTitle</a></li>
 			

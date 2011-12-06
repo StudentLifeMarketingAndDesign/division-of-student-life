@@ -32,3 +32,4 @@ Requirements::block('jsparty/prototype.js');
 RecaptchaField::$public_api_key = '6LfEpsQSAAAAAHq26XZkxL4tQq-ic44JE0kTXnP3';
 RecaptchaField::$private_api_key = '6LfEpsQSAAAAAIN3mAwChfzQFLlfAkM4NatP8Klq';
 SpamProtectorManager::set_spam_protector("RecaptchaProtector");
+SortableDataObject::add_sortable_class('SidebarImage');

@@ -45,19 +45,15 @@ class AnnualReportPage extends RssFeaturePage {
 		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField("Content"));
 		$fields->addFieldToTab('Root.Content.Sidebar', new HTMLEditorField("FeatureBoxText"));
 
-		$manager = new FileDataObjectManager(
-				$this, // Controller
-				'SidebarImages', // Source name
-				'SidebarImage', // Source class
-				'Image', // File name on DataObject
-				array(
-					'Caption' => 'Caption', 
-				), // Headings 
-				'getCMSFields_forPopup' // Detail fields (function name or FieldSet object)
-				// Filter clause
-				// Sort clause
-				// Join clause
-			);
+		$manager =  new DataObjectManager(
+			$this,
+			'SidebarImages', // the name of the relationship
+			'SidebarImage', // the related table 
+			array(
+				"Caption" => "Caption"
+			),
+			'getCMSFields_forPopup' // the function to build the add/edit form
+		);
 		$fields->addFieldToTab("Root.Content.Sidebar",$manager);
 		//$fields->addFieldToTab('Root.Content.Main', new ImageField('HeaderImage','Header Image'));		
 		return $fields;
@@ -71,8 +67,18 @@ class AnnualReportPage extends RssFeaturePage {
 
 class AnnualReportPage_Controller extends RssFeaturePage_Controller {
 
+	public function AnnualReportCover(){
+
+		$cover = DataObject::get("AnnualReportPage", "Cover = 1", $sort = "Sort ASC");
+		if($cover){
+			return $cover;
+		}else{
+			return false;
+		}
+	
+	}
 	public function AnnualReportPages() {
-		$annual_report_pages = DataObject::get("AnnualReportPage", null, $sort = "Sort DESC");
+		$annual_report_pages = DataObject::get("AnnualReportPage", "Cover = 0", $sort = "Sort ASC");
 		
 		if($annual_report_pages){
 			return $annual_report_pages;
