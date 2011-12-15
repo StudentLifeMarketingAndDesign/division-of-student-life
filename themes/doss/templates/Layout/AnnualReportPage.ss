@@ -3,6 +3,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("a.slideshow-image").fancybox();
+			$("a.iframe-slideshow").fancybox();
 		});
 	</script>
 
