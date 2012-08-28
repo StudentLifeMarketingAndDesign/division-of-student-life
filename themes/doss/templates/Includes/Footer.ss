@@ -40,16 +40,23 @@
 					<li class="footer-nav-header"><a href="#">Parents</a></li>
 					<li><a href="parents">Parent’s Association</a></li>
 				</ul>
+				
 				<!-- staff coming soon <ul>
 					<li class="footer-nav-header"><a href="staff">Staff</a></li>
 					<li><a href="#">Staff Profiles</a></li>
 					<li><a href="#">Staff Directory</a></li>
 				</ul>-->
                 			
-	    <ul>
+	   			 <ul>
 					<li class="footer-nav-header"><a href="about">About</a></li>
 					<li><a href="about/contact">Contact</a></li>
 				</ul>
+				<ul>
+				<li><a style="padding: 5px 10px; display: inline; background: #d9b32c url(button.png) repeat-x bottom; border: none; color: #fff; font-weight: bold; -moz-border-radius: 5px; -webkit-border-radius: 5px; text-shadow: 1px 1px #666; text-decoration: none; font-size:20px;" href="http://studentlife.uiowa.edu/give">Give Now</a></li>
+				
+				</ul>
+				
+				
 			</div>
 		</div>
 		<div id="footer-contact">

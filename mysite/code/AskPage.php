@@ -1,26 +1,17 @@
 <?php
 class AskPage extends Page {
-
 	public static $db = array(
-		
-	
 	);
-
 	public static $has_one = array(
 		/*"HeaderImage" => "Image"*/
 	);
-	
 	public static $allowed_children = array(
-	
-		"AskQuestion" 
-	
+		"AskQuestion"
 	);
 	
 	function getCMSFields() { 
-	
 		$fields = parent::getCMSFields();
 		/*$fields->addFieldToTab('Root.Content.Main', new ImageField('HeaderImage','Header Image'));*/
-		
 		$fields->removeFieldFromTab('Root.Content.Main', 'Content');
 		$fields->removeFieldFromTab('Root.Content.Main', 'Sidebar');
 		$fields->removeFieldFromTab('Root.Content.Main', 'Image');
@@ -28,45 +19,32 @@ class AskPage extends Page {
 		$categoryTable = new TableField(
 			'QuestionCategory',
 			'QuestionCategory', 
-			array('Name' => 'Available Question Categories'), 
-			
+			array('Name' => 'Available Question Categories'),
 			array('Name' => 'TextField')
-		
 		);
 		
-		
 		$fields->addFieldToTab('Root.Content.Main', $categoryTable);
-		
 		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField("Content"));
-		
 		return $fields;
-
 	}
-
 }
 
 class AskPage_Controller extends Page_Controller {
-
-	  public function Success()
-    {
+	public function Success() {
         return isset($_REQUEST['success']) && $_REQUEST['success'] == "1";
     }
 	
 	public function Categories() {
 		$dataSet = DataObject::get("QuestionCategory",null,"Name ASC");
-		
 		if($dataSet)
 			return $dataSet;
-	
 	}
 	
 	public function Questions(){
-	
 		$questions = DataObject::get("AskQuestion");
 		
 		if($questions)
 			return $questions;
-	
 	}
 	
 	public function LatestAnswer(){
@@ -74,7 +52,6 @@ class AskPage_Controller extends Page_Controller {
 		
 		if($question)
 			return $question;
-	
 	}
 
 	function AskForm() {
@@ -84,7 +61,6 @@ class AskPage_Controller extends Page_Controller {
 	        
 	        $recaptchaField = new RecaptchaField('MyCaptcha');
 			$recaptchaField->jsOptions = array('theme' => 'white'); // optional
-	        
 	        
 	        $fields = new FieldSet(
 	        	new DropdownField('QuestionCategoryID', 'What topic does your question fall under?', $categorySet->toDropdownMap('ID','Name')),
@@ -110,10 +86,8 @@ class AskPage_Controller extends Page_Controller {
 	        $form = new Form($this, 'AskForm', $fields, $actions, $validator);
 	        
 			SpamProtectorManager::update_form($form, null, array('Content', 'AskerName', 'AskerEmail'));
-
-	     
 	        return $form;
-	     }
+	}
 	  
 	function doAsk($data, $form) {
 	 		$askPage = DataObject::get_one("AskPage");
@@ -125,26 +99,18 @@ class AskPage_Controller extends Page_Controller {
 				$entry->setParent($askPage->ID);
 			}
 			$form->saveInto($entry);
-			
 			$questionCategory = $entry->QuestionCategory;
 			$questionCategoryName = $questionCategory->Name;
-			
-			
 			
 			$entry->Title = substr($entry->Content,0,32)."…";
 			$entry->MenuTitle = substr($entry->Content,0,32)."…";
 			
-			
-			
 	 		//print_r($form->fields);
 			// Write it to the database.
-			$entry->writeToStage("Stage");
-			//$entry->publish("Stage","Live");
-			
 			Session::set('ActionStatus', 'success'); 
 			Session::set('ActionMessage', 'Thanks for submitting your question!');
 			
-		//Email notification		
+			//Email notification		
 			$from = "Student Life Website";
 			$to = "belinda-marner@uiowa.edu";
 			$subject = "New Question asked on the Student Life site";
@@ -152,24 +118,12 @@ class AskPage_Controller extends Page_Controller {
 				<p>Question from '.$entry->AskerName.' [<a href="mailto:'.$entry->AskerEmail.'
 				">'.$entry->AskerEmail.'</a>]: '.$entry->Content.'</p>
 				<p><a href="http://studentlife.uiowa.edu/admin/show/'.$entry->ID.'">Answer this question</a></p>';
-				
-			
 			$email = new Email($from, $to, $subject, $body);
-			
-			
-			if($email->send()){
-			
+			$email->send();
 			Director::redirect($this->Link("?success=1#ask-success"));
-			}else{
-			
-			Director::redirect($this->Link("?failure=1"));
-
-			}
-			
-			
+			#return "";
+			#Director::redirect("/");
 			//print_r($form);
-			
-	 
 		}
 
 

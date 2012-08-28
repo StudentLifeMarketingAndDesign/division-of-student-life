@@ -116,7 +116,9 @@ function toTab(p) {
 		</div>
 	</div>
 	<div class="sidebar">
-		<object width="300" height="225"> <param name="flashvars" value="offsite=true&lang=en-us&page_show_url=%2Fphotos%2Fimubuddy%2Fsets%2F72157624281419021%2Fshow%2F&page_show_back_url=%2Fphotos%2Fimubuddy%2Fsets%2F72157624281419021%2F&set_id=72157624281419021&jump_to="></param> <param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=71649"></param> <param name="allowFullScreen" value="true"></param><embed type="application/x-shockwave-flash" src="http://www.flickr.com/apps/slideshow/show.swf?v=71649" allowFullScreen="true" flashvars="offsite=true&lang=en-us&page_show_url=%2Fphotos%2Fimubuddy%2Fsets%2F72157624281419021%2Fshow%2F&page_show_back_url=%2Fphotos%2Fimubuddy%2Fsets%2F72157624281419021%2F&set_id=72157624281419021&jump_to=" width="300" height="225"></embed></object>
+    	<a href="give/"><img src="{$ThemeDir}/images/give-now-banner.jpg" alt="Give to the Divison of Student Life"/ style="margin-bottom:9px;"></a>
+    
+		<object width="300" height="225" style="margin-bottom:9px;"> <param name="flashvars" value="offsite=true&lang=en-us&page_show_url=%2Fphotos%2Fimubuddy%2Fsets%2F72157624281419021%2Fshow%2F&page_show_back_url=%2Fphotos%2Fimubuddy%2Fsets%2F72157624281419021%2F&set_id=72157624281419021&jump_to="></param> <param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=71649"></param> <param name="allowFullScreen" value="true"></param><embed type="application/x-shockwave-flash" src="http://www.flickr.com/apps/slideshow/show.swf?v=71649" allowFullScreen="true" flashvars="offsite=true&lang=en-us&page_show_url=%2Fphotos%2Fimubuddy%2Fsets%2F72157624281419021%2Fshow%2F&page_show_back_url=%2Fphotos%2Fimubuddy%2Fsets%2F72157624281419021%2F&set_id=72157624281419021&jump_to=" width="300" height="225"></embed></object>
 		
 		<!--<div id="staff-spotlight" class="side-box single-image">
 			<a href="#"><img src="http://dummyimage.com/300x225.gif" class="shadow" /></a>

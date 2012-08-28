@@ -33,20 +33,18 @@ jQuery(document).ready(function() {
 			
 			<div style="clear: left"></div>
 			
-		
-			
 		</div>
-		
-				
-			
-		
-
-
 			
 		<a href="/parents-new/ask/" class="button ask-button">Ask Belinda a Question!</a>
 		<a href="/parents-new/ask/" class="button view-answers">View Answers</a></div>
 			
-			</div>
+		</div>
+
+		<!-- <div id="at-a-glance" class="side-feature shadow recaptcha-form" style="float:right;">
+			$SideBar
+			<div style="clear: left"></div>
+		</div> -->
+
 	
 	
 	</div>

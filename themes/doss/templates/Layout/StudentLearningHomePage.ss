@@ -10,7 +10,7 @@
 		<% end_if %>
 		
 
-			<blockquote>$PurposeStatement</blockquote>
+			<blockquote style="margin-top:-5px; margin-bottom:5px;">$PurposeStatement</blockquote>
 		
 		
 		<!--$Content-->

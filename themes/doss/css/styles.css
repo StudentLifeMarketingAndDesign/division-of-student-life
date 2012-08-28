@@ -1871,12 +1871,19 @@ font-size: 48px;
 	float:right;
 	margin:0 0 20px 20px;
 }
+	
 
 #annual-report-content ul, #annual-report-content ol {
 /*	margin-left: 25px; */
 
 }
 
+#annual-report-content img.sig {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+}
 
 #annual-report-content img {
   -moz-box-shadow: 0 3px 5px #222;

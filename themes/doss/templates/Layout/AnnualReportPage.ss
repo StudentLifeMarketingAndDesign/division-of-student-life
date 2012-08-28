@@ -26,7 +26,7 @@
 	<% if Cover %>
 	<div id="annual-report-header" class="cover">
 	
-			<img src="$ThemeDir/images/annual_report_cover.png" />
+			<h1 style="height: 80px; font-size: 75px;">ANNUAL REPORT 2011</h1>
 		</div>		
 		<% end_if %>
 		
