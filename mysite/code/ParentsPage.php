@@ -2,12 +2,13 @@
 class ParentsPage extends Page {
 
 	public static $db = array(
-		
-	
+		"Ad1URL" => "Text",
+		"Ad1Description" => "Text"
 	);
 
 	public static $has_one = array(
 		/*"HeaderImage" => "Image"*/
+		"Ad1Image" => "Image"
 	);
 	
 	/*public static $allowed_children = array(
@@ -19,6 +20,11 @@ class ParentsPage extends Page {
 	function getCMSFields() { 
 	
 		$fields = parent::getCMSFields();
+		$fields->addFieldToTab('Root.Content.Main', new ImageField('Ad1Image','Parents Ad Image'));
+		$fields->addFieldToTab('Root.Content.Main', new TextField('Ad1URL','Parents Ad URL'));
+		$fields->addFieldToTab('Root.Content.Main', new TextField('Ad1Description','Describe the Ad'));
+
+
 		/*$fields->addFieldToTab('Root.Content.Main', new ImageField('HeaderImage','Header Image'));*/
 		
 		return $fields;

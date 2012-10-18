@@ -6,9 +6,9 @@ $project = 'mysite';
 global $databaseConfig;
 $databaseConfig = array(
 	"type" => 'MySQLDatabase',
-	"server" => 'localhost',
-	"username" => 'root',
-	"password" => 'root',
+	"server" => 'koko.imu.uiowa.edu',
+	"username" => 'studentlife',
+	"password" => 'S5eswUTr',
 	"database" => 'studentlife',
 	"path" => '',
 );
@@ -32,4 +32,9 @@ Requirements::block('jsparty/prototype.js');
 RecaptchaField::$public_api_key = '6LfEpsQSAAAAAHq26XZkxL4tQq-ic44JE0kTXnP3';
 RecaptchaField::$private_api_key = '6LfEpsQSAAAAAIN3mAwChfzQFLlfAkM4NatP8Klq';
 SpamProtectorManager::set_spam_protector("RecaptchaProtector");
+/*UploadifyField::show_debug();
+UploadifyField::disable_authentication();*/
 SortableDataObject::add_sortable_class('SidebarImage');
+
+GD::set_default_quality(85);
+

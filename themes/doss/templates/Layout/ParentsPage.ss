@@ -20,7 +20,6 @@ jQuery(document).ready(function() {
 		$Content
 		$Form
 		
-		
 </div>
 	<div class="sidebar">
 		
@@ -38,12 +37,15 @@ jQuery(document).ready(function() {
 		<a href="/parents-new/ask/" class="button ask-button">Ask Belinda a Question!</a>
 		<a href="/parents-new/ask/" class="button view-answers">View Answers</a></div>
 			
+			
+			<div id="parents-ad">
+				<a href="$Ad1URL"><img src="$Ad1Image.URL" alt="$Ad1Description"/></a>
+			<div style="clear: left"></div>	
 		</div>
 
-		<!-- <div id="at-a-glance" class="side-feature shadow recaptcha-form" style="float:right;">
-			$SideBar
-			<div style="clear: left"></div>
-		</div> -->
+	
+		
+		</div>
 
 	
 	

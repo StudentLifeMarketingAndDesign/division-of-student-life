@@ -107,6 +107,9 @@ class AskPage_Controller extends Page_Controller {
 			
 	 		//print_r($form->fields);
 			// Write it to the database.
+			
+			$entry->writeToStage('Stage');
+			
 			Session::set('ActionStatus', 'success'); 
 			Session::set('ActionMessage', 'Thanks for submitting your question!');
 			
@@ -121,9 +124,7 @@ class AskPage_Controller extends Page_Controller {
 			$email = new Email($from, $to, $subject, $body);
 			$email->send();
 			Director::redirect($this->Link("?success=1#ask-success"));
-			#return "";
-			#Director::redirect("/");
-			//print_r($form);
+
 		}
 
 

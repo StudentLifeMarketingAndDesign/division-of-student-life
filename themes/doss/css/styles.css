@@ -912,6 +912,11 @@ img.right {
     background-position: 40px 0;
     padding-left: 100px;
     height: 80px; }
+    
+#parents-ad {
+	margin-left:-15px;
+	
+	}
 
 .intro {
   width: 395px;
