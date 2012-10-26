@@ -383,7 +383,7 @@ caption {
   #navigation ul {
     height: 14px;
     position: relative;
-    margin: 71px 0 0 475px;
+    margin: 65px 0 0 475px;
     padding: 0; }
     #navigation ul li {
       list-style: none;
@@ -393,52 +393,68 @@ caption {
       padding: 0; }
     #navigation ul li, #navigation ul a {
       display: block;
-      height: 14px; }
+      height: 20px; }
     #navigation ul a {
       position: absolute;
       display: block;
-      background: url("../images/nav-sprite2.png") no-repeat top right;
-      height: 0;
-      padding-top: 14px;
-      overflow: hidden; }
+      text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);      
+      color: white;
+      overflow: hidden;
+      font-size: 14px;
+      font-weight: normal;
+       }
+      
+      #navigation ul a:hover{
+	      color: #ccc;
+	      text-decoration: none;
+	      
+      }
+      
+      #navigation ul li.current a, #navigation ul li.section a {
+	      color: #ccc;
+	      
+      }
       
       
     /* nav without staff page */
     
-    #navigation ul li#nav-home a {
-      left: -15px;
+   /* #navigation ul li#nav-home a {
+      left: -85px;
       width: 68px;
-      background-position: -490px 0px; }
+      background-position: -490px 0px; }*/
     
     #navigation ul li#nav-student-success a {
-      left: 47px;
-      width: 109px;
+      left: -85px;
+      width: 114px;
       background-position: 0px 0px; }
     #navigation ul li#nav-campus-life a {
-      left: 156px;
-      width: 93px;
+      left: 45px;
+      width: 100px;
       background-position: -109px 0px; }
     #navigation ul li#nav-health-and-safety a {
-      left: 248px;
-      width: 124px;
+      left: 150px;
+      width: 144px;
       background-position: -202px 0px; }
     #navigation ul li#nav-parents a {
-      left: 372px;
-      width: 64px;
+      left: 287px;
+      width: 74px;
       background-position: -326px 0px; }
-      
+  
       
    /* #navigation ul li#nav-staff a {
       left: 390px;
       width: 47px;
       background-position: -390px 0px; }*/
       
-      
-      
     #navigation ul li#nav-about a {
-      left: 437px;
+      left: 357px;
       width: 48px;
       background-position: -437px 0px; }
+      
+   #navigation ul li#nav-initiatives a {
+      left: 412px;
+      width: 64px;
+      background-position: -326px 0px; }     
       
     #navigation ul li#nav-home a:hover {
       background-position: -490px -14px; }
@@ -1631,6 +1647,12 @@ margin: 0;
 .assessment-coordinator h3, .assessment-coordinator h3 a {
 	color: #275086;
 
+}
+
+.assessment.multicultural {
+	background: #fbf6d0;
+	
+	
 }
 
 #feed-sidebar {

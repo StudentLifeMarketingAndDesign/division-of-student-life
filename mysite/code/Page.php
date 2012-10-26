@@ -73,6 +73,15 @@ class Page_Controller extends ContentController {
 			return $assessmentSet;
 	}
 	
+		public function MulticulturalReports($number = 0, $start = 0){
+	
+		$assessmentSet = DataObject::get("MulticulturalReportPage", null, $sort = "PublishedDate DESC", null, "$start, $number");
+		
+		if($assessmentSet)
+			return $assessmentSet;
+	}
+	
+	
 	public function AssessmentCoordinators(){
 	
 		$assessmentProfiles = DataObject::get("AssessmentCoordinatorProfile");
