@@ -22,7 +22,7 @@
 			</div>-->
 		
 		<div style="clear:left"></div>
-		<h2>Latest Reports</h2>
+		<h2>Latest Change Team Reports</h2>
 		<div id="assessment-preview-container">
 		
 		
@@ -38,9 +38,10 @@
 			</div>
 			
 		<% end_control %>
-			
+		
 			
 			<div style="clear: left"></div>
+			<p><a href="change-team-reports/">See all Change Team Reports </a></p>
 		</div>
 		
 		

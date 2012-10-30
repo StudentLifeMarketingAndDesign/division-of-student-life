@@ -21,8 +21,7 @@
   <link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet" type="text/css" >
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> 
 
- <script src="{$ThemeDir}/js/jquery-1.4.2.min.js"></script>
-  
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>  
   <!--[if lt IE 7 ]><script src="js/dd_belatedpng.js?v=1"></script><![endif]-->
 
   <script src="{$ThemeDir}/js/jquery.hoverIntent.minified.js"></script>

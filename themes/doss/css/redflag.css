@@ -1,0 +1,51 @@
+.redflag .subhead{
+	background: #ed1b2f;
+	text-align: center;
+	color: white;
+	font-size: 2em;
+	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+p.bjqs-caption {
+	background: black;
+	color: white;
+	
+}
+
+.redflag h1.content-header{
+	background: #ed1b2f;
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+}
+
+.redflag h1.content-header img{
+	float: none;
+	margin: auto;
+	display: block;
+}
+
+.redflag-twitter {
+	float: right;
+	width: 300px;
+}
+
+.redflag-posterlist {
+	margin: 0;
+	padding: 0;
+	
+}
+
+.redflag-posterlist li {
+	list-style-type: none;
+	float: left;
+	margin-left: 5px;
+}
+
+.redflag-posterlist li.first {
+	margin: 0;
+}

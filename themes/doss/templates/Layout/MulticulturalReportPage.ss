@@ -2,12 +2,12 @@
 <div class="container">
 
 <div id="student-learning" class="content twothirds shadow">
-<p class="all-assessments-link"><a href="$Parent.Link">See all assessment reports</a></p>
+<p class="all-assessments-link"><a href="$Parent.Link">See all reports</a></p>
 		<% if Image %>
 			<% control Image.SetWidth(570) %><img src="$URL" class="photo" /><% end_control %>
 		<% end_if %>
 
-				<div class="assessment">
+				<div class="assessment multicultural">
 					<div class="assessment-content">
 						<h3>$Title <span>published on $PublishedDate.Format(F j&#44; Y)</span></span></h3>
 						$Content

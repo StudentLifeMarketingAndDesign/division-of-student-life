@@ -1615,7 +1615,7 @@ margin: 0;
 }
 
 .all-assessments-link {
-	float: right;
+/*	float: right; */
 
 }
 
@@ -1651,6 +1651,12 @@ margin: 0;
 
 .assessment.multicultural {
 	background: #fbf6d0;
+	
+	
+}
+
+.assessment.multicultural .assessment-content{
+	background: none;
 	
 	
 }

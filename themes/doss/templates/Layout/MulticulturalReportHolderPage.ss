@@ -10,9 +10,9 @@
 		
 		<% if Children %>
 			<div id="assessment-preview-container">
-				<% control getAssessments(3) %>
+				<% control MulticulturalReports(3) %>
 		
-					<div class="assessment preview first">
+					<div class="assessment preview first multicultural">
 						<div class="assessment-content">
 							<h3><a href="$Link">$Title <span>published on $PublishedDate.Format(F j&#44; Y)</span></span></a></h3>
 							<p>$Content.Summary(15) <a href="$Link">[...] more</a></p>
@@ -23,16 +23,15 @@
 				</div><!-- end assessment preview container -->
 		<% end_if %>
 		
-		<div style="clear: left"></div>
-		<h2>More Assessments</h2>
-		<ul>
-		<% control getAssessments(100,3) %>
+
+			<div style="clear: left"></div>
+			<h2>More Reports</h2>
+			<ul>
+				<% control MulticulturalReports(100,3) %>
+					<li><a href="$Link"><strong>$Title</strong> - published on $PublishedDate.Format(F j&#44; Y)</a></li>
+				<% end_control %>
+			</ul>
 		
-		<li><a href="$Link"><strong>$Title</strong> - published on $PublishedDate.Format(F j&#44; Y)</a></li>
-		
-		
-		<% end_control %>
-		</ul>
 		
 
 </div><!-- end container -->
