@@ -1,4 +1,4 @@
-.redflag .subhead{
+.container.redflag p.subhead{
 	background: #ed1b2f;
 	text-align: center;
 	color: white;
@@ -29,9 +29,59 @@ p.bjqs-caption {
 	display: block;
 }
 
+.redflag-posters{
+	margin: 10px 0;	
+	
+}
+
+.container.redflag p, .container.redflag li {
+
+	font-size: 18px;
+	
+}
+
+.container.redflag h2 {
+	color: #ae1423;
+	font-size: 36px;
+	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+
+}
+
+.container.redflag h3 {
+	background-color: black;
+	color: white;
+	padding: 5px;
+	font-size: 32px;
+	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+	text-align: center;
+	margin: 0;
+
+}
+
+.container.redflag .sidebar a.redflag-facebook {
+	background: #3B5998;
+	color: white;
+	padding: 5px;
+	font-size: 32px;
+	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+	text-align: center;
+	margin: 30px 0;
+	display: block;
+	
+}
+
+.container.redflag h3 a {
+	color: white;
+	
+}
+.container.redflag a {
+	color: #89101b;
+	
+}
+
 .redflag-twitter {
-	float: right;
 	width: 300px;
+	margin: auto;
 }
 
 .redflag-posterlist {
@@ -48,4 +98,26 @@ p.bjqs-caption {
 
 .redflag-posterlist li.first {
 	margin: 0;
+}
+
+.side-feature.redflag-events {
+	width: 270px;
+	margin-left: 0;
+	margin-bottom: 32px;
+	
+}
+
+.redflag blockquote {
+	background: #b41524;
+	padding: 10px;
+	color: white;
+	display: block;
+	margin: 0;
+	
+}
+/* Slider Styles */
+
+.bjqs-markers, ul.bjqs-controls {
+	display: none;
+	
 }

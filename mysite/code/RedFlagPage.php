@@ -18,6 +18,7 @@ class RedflagPage extends Page {
 	function getCMSFields() { 
 	
 		$fields = parent::getCMSFields();
+	
 		
 		return $fields;
 

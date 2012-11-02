@@ -410,7 +410,7 @@ caption {
 	      
       }
       
-      #navigation ul li.current a, #navigation ul li.section a {
+      #navigation ul li.current a, #navigation ul li.navmode-section a {
 	      color: #ccc;
 	      
       }
