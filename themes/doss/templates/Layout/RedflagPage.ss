@@ -18,11 +18,7 @@ jQuery(document).ready(function($) {
 			<% control Image.SetWidth(570) %><img src="$URL" class="photo" alt="Feature Photo" /><% end_control %>
 		<% end_if %>
 		
-		<!--<div class="redflag-twitter">
-<a class="twitter-timeline" href="https://twitter.com/search?q=%23Iowa" data-widget-id="262961670819815425">Tweets about "#Iowa"</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-		</div>-->
 				
 		<div class="redflag-posters">
 			<ul class="bjqs">
@@ -52,11 +48,13 @@ jQuery(document).ready(function($) {
 		<div id="at-a-glance" class="side-feature shadow redflag-events">
 			$SideBar
 		</div>
-		<!--<div class="redflag-twitter">
-<a class="twitter-timeline" href="https://twitter.com/search?q=%23Iowa" data-widget-id="262961670819815425">Tweets about "#Iowa"</a>
+		<div class="redflag-twitter">
+<a class="twitter-timeline" href="https://twitter.com/search?q=%23Iowa" data-widget-id="262961670819815425">Tweets about "#RedFlagIowa"</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-		</div>-->
+		</div>
+		
+<script src="http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/youtube.xml&up_channel=MensAntiViolence&synd=open&w=280&h=390&title=&border=%23ffffff%7C3px%2C1px+solid+%23999999&output=js"></script>
 		<!--<div id="contact" class="side-box">
 			<h3>Contact Us</h3>
 			<form action="#" method="get" accept-charset="utf-8">

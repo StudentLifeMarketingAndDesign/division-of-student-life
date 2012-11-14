@@ -1,6 +1,5 @@
-<% require themedCSS(annualreport) %>
-
  <script src="{$ThemeDir}/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<% require themedCSS(leadershiplegacy) %>
  <link rel="stylesheet" type="text/css" href="{$ThemeDir}/js/fancybox/jquery.fancybox-1.3.4.css" />
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -12,7 +11,7 @@
 
 <% if BackgroundColor = e9e9e9 %>
 	<style>
-		#annual-report-content h1{
+		#leadership-legacy-newsletter-content h1{
 		
 			color: #003448;
 		
@@ -23,12 +22,12 @@
 
 <% end_if %>
 <div class="container">
-<!--<div id="annual-report" class="content shadow" style="background: $BackgroundColor">-->
-<div id="annual-report" class="content shadow">
-	<% if Cover %>
-	<div id="annual-report-header" class="cover">
+<!--<div id="leadership-legacy-newsletter" class="content shadow" style="background: $BackgroundColor">-->
+<div id="leadership-legacy-newsletter" class="content shadow">
+	<% if isCover %>
+	<div id="leadership-legacy-newsletter-header" class="cover">
 	
-			<h1 style="height: 80px; font-size: 75px;">ANNUAL REPORT 2011</h1>
+			<h1 style="height: 80px; font-size: 75px;">Leadership Legacy</h1>
 		</div>		
 		<% end_if %>
 		
@@ -41,20 +40,20 @@
 		<% if Cover %>
 			
 			<% else %>
-			<div id="annual-report-header">
-				<span class="annual-report-header-context"><a href="{$BaseHref}/2011-annual-report/">Division of Student Life Annual Report 2011</a></span>
+			<div id="leadership-legacy-newsletter-header">
+				<span class="leadership-legacy-newsletter-header-context"><a href="{$BaseHref}/2011-leadership-legacy-newsletter/">Division of Student Life Annual Report 2011</a></span>
 				<h1>$Title</h1>
 			</div>
 			<% end_if %>
-		<div id="annual-report-content">
+		<div id="leadership-legacy-newsletter-content">
 
 			$Content
 			
-			<% if Cover %>
+			<% if isCover %>
 				<h3>Table of Contents</h3>
-				<ul class="annual-report-toc">
+				<ul class="leadership-legacy-newsletter-toc">
 
-					<% control AnnualReportPages %>
+					<% control Pages %>
 					
 					<li><a href="$Link">$MenuTitle</a></li>
 					<% end_control %>
@@ -69,14 +68,14 @@
 		<! something here -->
 		
 </div>
-	<div class="annual-report-nav">
+	<div class="leadership-legacy-newsletter-nav">
 		<ul>
 			
-			<% control AnnualReportCover %>
+			<% control Cover %>
 			<li class="$LinkOrCurrent"><a href="$Link">$MenuTitle</a></li>
 
 			<% end_control %>
-			<% control AnnualReportPages %>
+			<% control Pages %>
 			<li class="$LinkOrCurrent"><a href="$Link">$MenuTitle</a></li>
 			
 			<% end_control %>
@@ -84,21 +83,21 @@
 		</ul>
 	
 	</div>
-	<div class="annual-report-sidebar">
+	<div class="leadership-legacy-newsletter-sidebar">
 	
-	
-		<% control SidebarImage %>
-			<a href="$Image.URL" class="slideshow-image" title="$Caption"><% control Image.SetWidth(290) %> <img src="$URL" class="shadow"><% end_control %></a>
-		<% end_control %>
-		
+		<% if LeadershipLegacySidebarImage %>
+			<% control LeadershipLegacySidebarImage %>
+				<a href="$Image.URL" class="slideshow-image" title="$Caption"><% control Image.SetWidth(290) %> <img src="$URL" class="shadow"><% end_control %></a>
+			<% end_control %>
+		<% end_if %>
 		<% if FeatureBoxText %>
-		<div id="annual-report-featurebox" class="side-feature shadow">
+		<div id="leadership-legacy-newsletter-featurebox" class="side-feature shadow">
 			$FeatureBoxText
 		</div>
 		<% end_if %>
 		
 		<% if RssPosts %>
-			<div id="feed-sidebar" class="shadow sidebar-box annual-report-feed">
+			<div id="feed-sidebar" class="shadow sidebar-box leadership-legacy-newsletter-feed">
 			<h2><% if AltFeedTitle %>$AltFeedTitle<% else %>$MenuTitle<% end_if %><br />posts from <a href="http://blog.studentlife.uiowa.edu/">our blog</a>!</h2>
 			<ul>			
 			<% control RssPosts %>
