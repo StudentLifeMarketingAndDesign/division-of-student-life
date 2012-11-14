@@ -1,4 +1,5 @@
- <script src="{$ThemeDir}/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="{$ThemeDir}/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
 <% require themedCSS(leadershiplegacy) %>
  <link rel="stylesheet" type="text/css" href="{$ThemeDir}/js/fancybox/jquery.fancybox-1.3.4.css" />
 	<script type="text/javascript">
@@ -27,15 +28,16 @@
 	<% if isCover %>
 	<div id="leadership-legacy-newsletter-header" class="cover">
 	
-			<h1 style="height: 80px; font-size: 75px;">Leadership Legacy</h1>
-		</div>		
-		<% end_if %>
+			<h1 style="height: 70px; font-size: 67px; font-weight: bold;">LEADERSHIP</h1>
+			<h1 style="height: 60px; font-size: 50px; letter-spacing:30px;">LEGACY</h1>
 		
 	
 
 		
 		<% if Image %>
 			<% control Image.SetWidth(650) %><img src="$URL" alt="Feature Photo" /><% end_control %>
+		<% end_if %>
+		</div>		
 		<% end_if %>
 		<% if Cover %>
 			

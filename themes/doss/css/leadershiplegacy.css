@@ -1,3 +1,15 @@
+.content h1{
+	font-family: "Bitter", sans-serif !important;
+	z-index: 100;
+	position: relative;
+	top: 380px;
+	margin-left: 170px;
+}
+
+.cover img{
+	margin-top: -150px;
+}
+
 #leadership-legacy-newsletter.content {
 	padding: 0;
 	width: 650px;
@@ -12,8 +24,8 @@
 
 }
 #leadership-legacy-newsletter-header {
-	padding: 10px;
-	background: url(../images/annual_report_header_bg.jpg);
+	padding: 0px;
+	background-color: none;
 	border-bottom: 2px #ccc solid;
 }
 
@@ -25,7 +37,7 @@ font-size: 48px;
 
 
 #leadership-legacy-newsletter-header.cover {
-	background: url(../images/annual_report_header_bg.jpg);
+	background-color: none;
 	border: none;
 }
 #leadership-legacy-newsletter-content {
@@ -73,7 +85,7 @@ font-size: 48px;
 	color: #005b82;
 	width: 280px;
 	display: block;
-	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+	font-family: 'Bitter', Arial, sans serif;
 	font-size: 28px;
 	text-align: right;
 	font-weight: normal;
@@ -100,7 +112,7 @@ font-size: 48px;
 
 
 #leadership-legacy-newsletter-content h2 {
-	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+	font-family: 'Bitter', Arial, sans serif;
 	font-size: 38px;
 	font-weight: normal;
 	color: #007daf;
@@ -108,7 +120,7 @@ font-size: 48px;
 
 #leadership-legacy-newsletter-content h3 {
 
-	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+	font-family: 'Bitter', Arial, sans serif;
 	font-size: 34px;
 	color: #00648b;
 	margin: 10px 0;
@@ -218,7 +230,7 @@ font-size: 48px;
 }
 
 .leadership-legacy-newsletter-header-context a{
-	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+	font-family: 'Bitter', Arial, sans serif;
 	font-size: 28px;
 	color: #005b7f;
 	display: block;
