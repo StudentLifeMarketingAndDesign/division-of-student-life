@@ -28,8 +28,8 @@
 	<% if isCover %>
 	<div id="leadership-legacy-newsletter-header" class="cover">
 	
-			<h1 style="height: 70px; font-size: 67px; font-weight: bold;">LEADERSHIP</h1>
-			<h1 style="height: 60px; font-size: 50px; letter-spacing:30px;">LEGACY</h1>
+			<span id="leadership" style="height: 70px; font-size: 67px; font-weight: bold;">LEADERSHIP</span>
+			<span id="legacy" style="height: 60px; font-size: 50px; letter-spacing:30px;">LEGACY</span>
 		
 	
 
@@ -40,12 +40,13 @@
 		</div>		
 			
 			<% else %>
-			<% if Image %>
-			<% control Image.SetWidth(650) %><img src="$URL" alt="Feature Photo" /><% end_control %>
-		<% end_if %>
 			<div id="leadership-legacy-newsletter-header">
 				<span class="leadership-legacy-newsletter-header-context"><a href="{$BaseHref}/2011-leadership-legacy-newsletter/">Division of Student Life Annual Report 2011</a></span>
 				<h1>$Title</h1>
+				
+			<% if Image %>
+			<% control Image.SetWidth(650) %><img src="$URL" alt="Feature Photo" /><% end_control %>
+		<% end_if %>
 			</div>
 			<% end_if %>
 		<div id="leadership-legacy-newsletter-content">
