@@ -38,10 +38,11 @@
 			<% control Image.SetWidth(650) %><img src="$URL" alt="Feature Photo" /><% end_control %>
 		<% end_if %>
 		</div>		
-		<% end_if %>
-		<% if Cover %>
 			
 			<% else %>
+			<% if Image %>
+			<% control Image.SetWidth(650) %><img src="$URL" alt="Feature Photo" /><% end_control %>
+		<% end_if %>
 			<div id="leadership-legacy-newsletter-header">
 				<span class="leadership-legacy-newsletter-header-context"><a href="{$BaseHref}/2011-leadership-legacy-newsletter/">Division of Student Life Annual Report 2011</a></span>
 				<h1>$Title</h1>

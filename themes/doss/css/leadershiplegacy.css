@@ -74,11 +74,16 @@ font-size: 48px;
 	width: auto;
 	filter: none;
 	-ms-filter: none;
+	width: 300px;
 }
 .leadership-legacy-newsletter-nav li.link {
 	float: none;
 	background: #e6e5e3;
-	width: auto;
+	width: 300px;
+	overflow: visible;
+}
+.leadership-legacy-newsletter-nav li.link:hover {
+	padding-left: 6px;
 }
 .leadership-legacy-newsletter-nav a {
 	padding: 10px;
@@ -89,6 +94,10 @@ font-size: 48px;
 	font-size: 28px;
 	text-align: right;
 	font-weight: normal;
+}
+
+.leadership-legacy-newsletter-nav a:hover{
+	color: #008ec6;
 }
 
 .leadership-legacy-newsletter-nav a span {
@@ -106,10 +115,12 @@ font-size: 48px;
 
 #leadership-legacy-newsletter-content a {
 	font-weight: bold;
-	color: #008ec6;
-
+	color: #005b82;
 }
 
+#leadership-legacy-newsletter-content a:hover{
+	color: #008ec6;
+}
 
 #leadership-legacy-newsletter-content h2 {
 	font-family: 'Bitter', Arial, sans serif;
@@ -122,7 +133,7 @@ font-size: 48px;
 
 	font-family: 'Bitter', Arial, sans serif;
 	font-size: 34px;
-	color: #00648b;
+	color: #000;
 	margin: 10px 0;
 }
 
@@ -153,7 +164,7 @@ font-size: 48px;
 	font-size: 17px;
 	list-style-position: inside;
 	background-color: #FFFDD3; /* c'est pa, IE */
-	background-color: rgba(255, 253, 211,0.6);
+	background-color: rgba(251, 231, 130, 0.6);
 	padding: 10px;
 	line-height: 25px;
 	border: 1px solid #ddd;
@@ -168,7 +179,7 @@ font-size: 48px;
 }
 #leadership-legacy-newsletter-content .leadership-legacy-newsletter-toc li {
 
-	color: #008EC6
+	color: #005b82
 
 }
 
