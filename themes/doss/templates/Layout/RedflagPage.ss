@@ -18,19 +18,9 @@ jQuery(document).ready(function($) {
 			<% control Image.SetWidth(570) %><img src="$URL" class="photo" alt="Feature Photo" /><% end_control %>
 		<% end_if %>
 		
-
+<iframe width="590" height="332" src="http://www.youtube.com/embed/LSDFNjI9QmU?list=PLoRJzJbjSvzDsgPeJvTasgZF4nh3ACb8N&amp;hl=en_US" frameborder="0" allowfullscreen></iframe>
 				
-		<div class="redflag-posters">
-			<ul class="bjqs">
-			
-			<li class="first"><a href="assets/redflag/Coercion-A.pdf"><img src="{$ThemeDir}/images/redflag/Coercion-A_preview.jpg" title="Download and print this poster (pdf)"  /></a></li>
-			<li><a href="assets/redflag/Emotional Abuse-A.pdf"><img src="{$ThemeDir}/images/redflag/Emotional-Abuse-A_preview.jpg" title="Download and print this poster (pdf)"  /></a></li>
-			<li><a href="assets/redflag/Isolation-A.pdf"><img src="{$ThemeDir}/images/redflag/Isolation-A_preview.jpg" title="Download and print this poster (pdf)"  /></a></li>
-			<li><a href="assets/redflag/Stalking-Victim-A.pdf"><img src="{$ThemeDir}/images/redflag/Stalking-Victim-A_preview.jpg" title="Download and print this poster (pdf)"  /></a></li>		
-			<li><a href="assets/redflag/Victim Blaming-A.pdf"><img src="{$ThemeDir}/images/redflag/Victim-Blaming-A_preview.jpg" title="Download and print this poster (pdf)"  /></a></li>			
-			</ul>
-		
-		</div>
+
 		<div class="clearfix"></div>
 		$Content
 
@@ -54,7 +44,7 @@ jQuery(document).ready(function($) {
 
 		</div>
 		
-<script src="http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/youtube.xml&up_channel=MensAntiViolence&synd=open&w=280&h=390&title=&border=%23ffffff%7C3px%2C1px+solid+%23999999&output=js"></script>
+
 		<!--<div id="contact" class="side-box">
 			<h3>Contact Us</h3>
 			<form action="#" method="get" accept-charset="utf-8">
