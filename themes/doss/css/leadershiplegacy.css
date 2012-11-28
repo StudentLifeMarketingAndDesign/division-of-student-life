@@ -7,39 +7,27 @@
 	text-shadow: 1px 1px 10px black
 }
 
-.content #leadership{
-	font-family: "Bitter", sans-serif;
-	z-index: 100;
-	position: absolute;
-	bottom: 90px;
-	margin-left: 50px;
-	text-shadow: 1px 1px 10px black;
-	color: #fff;
-}
-
-.content #legacy{
-	font-family: "Bitter", sans-serif;
+.leadership{
 	z-index: 100;
 	position: absolute;
 	bottom: 20px;
-	margin-left: 50px;
-	text-shadow: 1px 1px 10px black;
-	color: #fff;
+	margin-left: 20px;
 }
+
 
 .cover img{
 }
 
 #leadership-legacy-newsletter.content {
 	padding: 0;
-	width: 650px;
+	width: 559px;
 	float: left;
 	background: url(../images/annual_report_background.jpg);
 }
 
 #feed-sidebar.leadership-legacy-newsletter-feed {
 	float: left;
-	width: 270px;
+	width: 320px;
 	margin: 10px;
 
 }
@@ -94,7 +82,7 @@ font-size: 48px;
 	width: auto;
 	filter: none;
 	-ms-filter: none;
-	width: 300px;
+	width: 395px;
 }
 .leadership-legacy-newsletter-nav li.link {
 	position: relative;
@@ -104,7 +92,7 @@ font-size: 48px;
   transition: padding-left 0.2s ease-out;
 	float: none;
 	background: #e6e5e3;
-	width: 300px;
+	width: 395px;
 }
 .leadership-legacy-newsletter-nav li.link:hover {
 	position: relative;
@@ -213,7 +201,7 @@ font-size: 48px;
 }
 
 .leadership-legacy-newsletter-sidebar {
-	width: 290px;
+	width: 340px;
 	float: right;
 	margin-right: 20px;
 
@@ -275,4 +263,12 @@ font-size: 48px;
 	color: #005b7f;
 	display: block;
 	padding: 9px;
+}
+
+#sidebox{
+	float: right;
+	width: 335px;
+	padding: 20px 20px 0 20px;
+	margin: 20px 14px 20px 0;
+	background-color: #ddd;
 }

@@ -28,14 +28,13 @@
 	<% if isCover %>
 	<div id="leadership-legacy-newsletter-header" class="cover">
 	
-			<span id="leadership" style="height: 70px; font-size: 67px; font-weight: bold;">LEADERSHIP</span>
-			<span id="legacy" style="height: 60px; font-size: 50px; letter-spacing:30px;">LEGACY</span>
+			<img src="{$BaseHref}/themes/doss/images/leadershiplegacy.png" class="leadership" />
 		
 	
 
 		
 		<% if Image %>
-			<% control Image.SetWidth(650) %><img src="$URL" alt="Feature Photo" /><% end_control %>
+			<% control Image.SetWidth(550) %><img src="$URL" alt="Feature Photo" /><% end_control %>
 		<% end_if %>
 		</div>		
 			
@@ -45,7 +44,7 @@
 				<h1>$Title</h1>
 				
 			<% if Image %>
-			<% control Image.SetWidth(650) %><img src="$URL" alt="Feature Photo" /><% end_control %>
+			<% control Image.SetWidth(550) %><img src="$URL" alt="Feature Photo" /><% end_control %>
 		<% end_if %>
 			</div>
 			<% end_if %>
@@ -118,6 +117,12 @@
 		<% end_if %>
 		
 		</div>
+			
+			<div id="sidebox">
+			<% if SideBox %>
+				$SideBox
+			<% end_if %>
+			</div>
 		
 
 </div>
