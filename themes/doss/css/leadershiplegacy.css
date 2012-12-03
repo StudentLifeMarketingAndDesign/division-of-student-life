@@ -1,3 +1,4 @@
+
 .content h1{
 	font-family: "Bitter", sans-serif !important;
 	z-index: 100;
@@ -15,7 +16,8 @@
 }
 
 
-.cover img{
+#leadership-legacy-newsletter-header img{
+	margin-top: 80px;
 }
 
 #leadership-legacy-newsletter.content {
@@ -265,10 +267,26 @@ font-size: 48px;
 	padding: 9px;
 }
 
+#orangebar{
+	height: 80px;
+	font-size: 55px;
+	background: url(../images/annual_report_header_bg.jpg);
+	border: 0;
+	margin: 0;
+	width: 559px;
+	position: absolute;
+	top: 0;
+	padding: 15px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
 #sidebox{
 	float: right;
 	width: 335px;
 	padding: 20px 20px 0 20px;
 	margin: 20px 14px 20px 0;
 	background-color: #ddd;
+	font-size: 11px;
 }

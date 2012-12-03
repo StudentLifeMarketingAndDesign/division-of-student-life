@@ -27,24 +27,24 @@
 <div id="leadership-legacy-newsletter" class="content shadow">
 	<% if isCover %>
 	<div id="leadership-legacy-newsletter-header" class="cover">
-	
+		<h1 id="orangebar";>LEADERSHIP LEGACY</h1>
 			<img src="{$BaseHref}/themes/doss/images/leadershiplegacy.png" class="leadership" />
 		
 	
 
 		
 		<% if Image %>
-			<% control Image.SetWidth(550) %><img src="$URL" alt="Feature Photo" /><% end_control %>
+			<% control Image.SetWidth(559) %><img src="$URL" alt="Feature Photo" /><% end_control %>
 		<% end_if %>
 		</div>		
 			
 			<% else %>
 			<div id="leadership-legacy-newsletter-header">
-				<span class="leadership-legacy-newsletter-header-context"><a href="{$BaseHref}/2011-leadership-legacy-newsletter/">Division of Student Life Annual Report 2011</a></span>
+				<h1 id="orangebar";>LEADERSHIP LEGACY</h1>
 				<h1>$Title</h1>
 				
 			<% if Image %>
-			<% control Image.SetWidth(550) %><img src="$URL" alt="Feature Photo" /><% end_control %>
+			<% control Image.SetWidth(559) %><img src="$URL" alt="Feature Photo" /><% end_control %>
 		<% end_if %>
 			</div>
 			<% end_if %>
