@@ -1,5 +1,6 @@
 <script src="{$ThemeDir}/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet" type="text/css" >
 <% require themedCSS(leadershiplegacy) %>
  <link rel="stylesheet" type="text/css" href="{$ThemeDir}/js/fancybox/jquery.fancybox-1.3.4.css" />
 	<script type="text/javascript">

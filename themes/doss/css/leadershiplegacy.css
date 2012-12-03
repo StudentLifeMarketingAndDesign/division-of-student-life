@@ -287,6 +287,12 @@ font-size: 48px;
 	width: 335px;
 	padding: 20px 20px 0 20px;
 	margin: 20px 14px 20px 0;
-	background-color: #ddd;
+	background-color: #FFC;
 	font-size: 11px;
+}
+
+#sidebox h2{
+font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+margin-bottom: 20px;
+font-size: 2.4em;
 }
