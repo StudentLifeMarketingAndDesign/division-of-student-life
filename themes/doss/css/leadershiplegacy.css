@@ -107,10 +107,10 @@ font-size: 48px;
 .leadership-legacy-newsletter-nav a {
 	padding: 10px;
 	color: #005b82;
-	width: 280px;
+	width: 340px;
 	display: block;
 	font-family: 'Bitter', Arial, sans serif;
-	font-size: 28px;
+	font-size: 32px;
 	text-align: right;
 	font-weight: normal;
 }
@@ -269,7 +269,7 @@ font-size: 48px;
 
 #orangebar{
 	height: 80px;
-	font-size: 55px;
+	font-size: 51px !important;
 	background: url(../images/annual_report_header_bg.jpg);
 	border: 0;
 	margin: 0;
