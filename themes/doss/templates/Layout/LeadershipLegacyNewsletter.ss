@@ -1,6 +1,7 @@
 <script src="{$ThemeDir}/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
 <link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet" type="text/css" >
+<link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
 <% require themedCSS(leadershiplegacy) %>
  <link rel="stylesheet" type="text/css" href="{$ThemeDir}/js/fancybox/jquery.fancybox-1.3.4.css" />
 	<script type="text/javascript">
@@ -42,7 +43,9 @@
 			<% else %>
 			<div id="leadership-legacy-newsletter-header">
 				<h1 id="orangebar";>LEADERSHIP LEGACY</h1>
-				<h1>$Title</h1>
+				<% if Caption %>
+				<span id="caption">$Caption</span>
+				<% end_if %>
 				
 			<% if Image %>
 			<% control Image %>
@@ -54,11 +57,11 @@
 			</div>
 			<% end_if %>
 		<div id="leadership-legacy-newsletter-content">
-
-			$Content
+		
+			<h1>$Title</h1>
 			
 			<% if isCover %>
-				<h3>Table of Contents</h3>
+				<h3>In This Issue</h3>
 				<ul class="leadership-legacy-newsletter-toc">
 
 					<% control Pages %>
@@ -70,6 +73,8 @@
 				</ul>
 			
 			<% end_if %>
+
+			$Content
 			
 		</div>
 		$Form
@@ -122,10 +127,10 @@
 		<% end_if %>
 		
 		</div>
-		
-			<img src="{$BaseHref}/themes/doss/images/leadershiplegacy_small.png" style="padding: 30px 0px 15px 30px; opacity:.9;" />
 			
 			<div id="sidebox">
+		
+			<img src="{$BaseHref}/themes/doss/images/leadershiplegacy_small.png" style="margin-bottom: 10px;" />
 			<% if SideBox %>
 				$SideBox
 			<% end_if %>

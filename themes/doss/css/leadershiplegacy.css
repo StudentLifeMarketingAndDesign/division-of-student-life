@@ -1,17 +1,27 @@
 
 .content h1{
-	font-family: "Bitter", sans-serif !important;
+	font-family: "Alfa Slab One", sans-serif !important;
+	font-size: 34px !important;
+	color: #000 !important;
+	border: 0 !important;
+}
+
+#caption{
 	z-index: 100;
 	position: absolute;
-	bottom: 20px;
+	bottom: 0px;
 	width: 100%;
-	padding: 10px 25px 10px 25px;
+	padding: 5px 35px 5px 35px;
 	text-shadow: 1px 1px 10px black;
 	background-color: rgba(0,0,0,.65);
-	font-size: 35px !important;
+	font-size: 12px !important;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
+	border: 0;
+	color: rgba(225,225,225,.85);
+	text-align: right;
+	margin-bottom: 5px;
 }
 
 .leadership{
@@ -117,8 +127,8 @@ font-size: 48px;
 	color: #005b82;
 	width: 350px;
 	display: block;
-	font-family: 'Bitter', Arial, sans serif;
-	font-size: 18px;
+	font-family: 'Yanone Kaffeesatz', Arial, sans serif;
+	font-size: 22px;
 	text-align: right;
 	font-weight: normal;
 }
@@ -150,7 +160,7 @@ font-size: 48px;
 }
 
 #leadership-legacy-newsletter-content h2 {
-	font-family: 'Bitter', Arial, sans serif;
+	font-family: 'Alfa Slab One', Arial, sans serif;
 	font-size: 38px;
 	font-weight: normal;
 	color: #007daf;
@@ -158,10 +168,10 @@ font-size: 48px;
 
 #leadership-legacy-newsletter-content h3 {
 
-	font-family: 'Bitter', Arial, sans serif;
-	font-size: 34px;
-	color: #000;
-	margin: 10px 0;
+	font-family: 'Alfa Slab One', Arial, sans serif;
+	font-size: 28px;
+	color: rgba(0,0,0,.7);
+	margin: 10px 0 7px 0;
 }
 
 #leadership-legacy-newsletter-content p, #leadership-legacy-newsletter-content ul, #leadership-legacy-newsletter-content ol{
@@ -187,6 +197,7 @@ font-size: 48px;
 }
 
 #leadership-legacy-newsletter-content ul, #leadership-legacy-newsletter-content ol {
+	margin-top: 20px;
 	list-style: square;
 	font-size: 17px;
 	list-style-position: inside;
@@ -205,9 +216,7 @@ font-size: 48px;
 	padding: 5px 0;
 }
 #leadership-legacy-newsletter-content .leadership-legacy-newsletter-toc li {
-
 	color: #005b82
-
 }
 
 .leadership-legacy-newsletter-sidebar {
@@ -268,7 +277,7 @@ font-size: 48px;
 }
 
 .leadership-legacy-newsletter-header-context a{
-	font-family: 'Bitter', Arial, sans serif;
+	font-family: 'Alfa Slab One', Arial, sans serif;
 	font-size: 28px;
 	color: #005b7f;
 	display: block;
@@ -295,9 +304,9 @@ font-size: 48px;
 	float: right;
 	width: 335px;
 	padding: 20px 20px 0 20px;
-	margin: 0px 14px 20px 0;
+	margin: 20px 14px 20px 0;
 	background-color: #FFC;
-	font-size: 11px;
+	font-size: 13px;
 }
 
 #sidebox h2{

@@ -6,7 +6,8 @@ class LeadershipLegacyNewsletter extends RssFeaturePage {
 		"isCover" => "Boolean",
 		"BackgroundColor" => "Text",
 		"FeatureBoxText" => "HTMLText",
-		"SideBox" => "HTMLText"
+		"SideBox" => "HTMLText",
+		"Caption" => "Text"
 		
 	
 	);
@@ -41,6 +42,7 @@ class LeadershipLegacyNewsletter extends RssFeaturePage {
 		/*$fields->addFieldToTab('Root.Content.Main', new DropdownField('BackgroundColor','Background Color:', $backgroundOptions));*/
 			
 		$fields->addFieldToTab('Root.Content.Main', new ImageField('Image','Main Image (optional)'));
+		$fields->addFieldToTab('Root.Content.Main', new TextField('Caption', 'Image Caption'));
 
 	
 		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField("Content"));
