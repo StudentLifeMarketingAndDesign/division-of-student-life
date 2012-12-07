@@ -45,7 +45,11 @@
 				<h1>$Title</h1>
 				
 			<% if Image %>
-			<% control Image.SetWidth(559) %><img src="$URL" alt="Feature Photo" /><% end_control %>
+			<% control Image %>
+			<% control CroppedImage(559,455) %>
+			<img src="$URL" alt="Feature Photo" />
+			<% end_control %>
+			<% end_control %>
 		<% end_if %>
 			</div>
 			<% end_if %>
@@ -118,6 +122,8 @@
 		<% end_if %>
 		
 		</div>
+		
+			<img src="{$BaseHref}/themes/doss/images/leadershiplegacy_small.png" style="padding: 30px 0px 15px 30px; opacity:.9;" />
 			
 			<div id="sidebox">
 			<% if SideBox %>

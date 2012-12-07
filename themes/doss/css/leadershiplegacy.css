@@ -4,20 +4,28 @@
 	z-index: 100;
 	position: absolute;
 	bottom: 20px;
-	margin-left: 50px;
-	text-shadow: 1px 1px 10px black
+	width: 100%;
+	padding: 10px 25px 10px 25px;
+	text-shadow: 1px 1px 10px black;
+	background-color: rgba(0,0,0,.65);
+	font-size: 35px !important;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 .leadership{
 	z-index: 100;
 	position: absolute;
 	bottom: 20px;
-	margin-left: 20px;
+	width: 525px;
+	padding: 5px 17px 5px 17px;
+	background-color: rgba(0,0,0,.65);
 }
 
 
 #leadership-legacy-newsletter-header img{
-	margin-top: 80px;
+	margin-top: 0px;
 }
 
 #leadership-legacy-newsletter.content {
@@ -107,10 +115,10 @@ font-size: 48px;
 .leadership-legacy-newsletter-nav a {
 	padding: 10px;
 	color: #005b82;
-	width: 340px;
+	width: 350px;
 	display: block;
 	font-family: 'Bitter', Arial, sans serif;
-	font-size: 32px;
+	font-size: 18px;
 	text-align: right;
 	font-weight: normal;
 }
@@ -280,13 +288,14 @@ font-size: 48px;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
+	display: none;
 }
 
 #sidebox{
 	float: right;
 	width: 335px;
 	padding: 20px 20px 0 20px;
-	margin: 20px 14px 20px 0;
+	margin: 0px 14px 20px 0;
 	background-color: #FFC;
 	font-size: 11px;
 }
