@@ -49,7 +49,7 @@
 				
 			<% if Image %>
 			<% control Image %>
-			<% control CroppedImage(559,455) %>
+			<% control CroppedImage(559,400) %>
 			<img src="$URL" alt="Feature Photo" />
 			<% end_control %>
 			<% end_control %>
