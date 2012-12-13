@@ -3,10 +3,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         
-        <!-- Facebook sharing information tags -->
-        <meta property="og:title" content="*|MC:SUBJECT|*" />
         
-        <title>*|MC:SUBJECT|*</title>
+        <title>$Title - Leadership Legacy at the Division of Student Life - The University of Iowa</title>
 		<style type="text/css">
 			/* Client-specific Styles */
 			#outlook a{padding:0;} /* Force Outlook to provide a "view in browser" button. */
@@ -30,7 +28,7 @@
 			* @theme page
 			*/
 			body, #backgroundTable{
-				/*@editable*/ background-color:#FAFAFA;
+				/*@editable*/ background-color:#333;
 			}
 
 			/**
@@ -131,7 +129,7 @@
 			* @theme page
 			*/
 			#templatePreheader{
-				/*@editable*/ background-color:#FAFAFA;
+				/*@editable*/ /*background-color:#FAFAFA;*/
 			}
 
 			/**
@@ -140,7 +138,7 @@
 			* @tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
 			*/
 			.preheaderContent div{
-				/*@editable*/ color:#505050;
+				/*@editable*/ color:white;
 				/*@editable*/ font-family:Arial;
 				/*@editable*/ font-size:10px;
 				/*@editable*/ line-height:100%;
@@ -153,7 +151,7 @@
 			* @tip Set the styling for your email's preheader links. Choose a color that helps them stand out from your text.
 			*/
 			.preheaderContent div a:link, .preheaderContent div a:visited, /* Yahoo! Mail Override */ .preheaderContent div a .yshortcuts /* Yahoo! Mail Override */{
-				/*@editable*/ color:#336699;
+				/*@editable*/ color:white;
 				/*@editable*/ font-weight:normal;
 				/*@editable*/ text-decoration:underline;
 			}
@@ -212,6 +210,8 @@
 			*/
 			#templateContainer, .bodyContent{
 				/*@editable*/ background-color:#FFFFFF;
+				background-image: url('{$BaseHref}themes/doss/images/annual_report_background.jpg');
+				background-color: white;
 			}
 
 			/**
@@ -234,9 +234,9 @@
 			* @tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
 			*/
 			.bodyContent div a:link, .bodyContent div a:visited, /* Yahoo! Mail Override */ .bodyContent div a .yshortcuts /* Yahoo! Mail Override */{
-				/*@editable*/ color:#336699;
-				/*@editable*/ font-weight:normal;
-				/*@editable*/ text-decoration:underline;
+				/*@editable*/ color:#005B82;
+				/*@editable*/ font-weight: bold;
+				/*@editable*/ text-decoration: none;
 			}
 
 			.bodyContent img{
@@ -329,6 +329,57 @@
 			#monkeyRewards img{
 				max-width:190px;
 			}
+			
+			.image_header{
+				background-color: #494949;
+				padding: 10px;
+			}
+			
+			.image_header img{
+				display: block;
+				padding-bottom: 10px;
+			}
+			
+			.image_header h1 {
+				color: white;
+				margin-left: 20px;
+				padding-top: 10px;
+				border-top: 1px solid #6e6e6e;
+
+				
+			}
+			
+			.section-container {
+				background-color: #f9f2d2;
+				padding: 10px;
+				margin: 10px 0;
+				border: 1px solid #ddd;
+			}
+			
+			.section-container h2 {
+				border-bottom: 1px dashed #005B82;
+				padding-bottom: 3px;
+			}
+			
+			.section-continue {
+				float: right;
+				background: #005B82;
+				padding: 5px;
+				border: 1px solid #ccc;
+			}
+			
+			.bodyContent div p.section-continue a {
+				color: white;
+				
+			}
+			
+			.clear{ 
+				clear: both;
+			}
+			
+			.intro{
+				padding: 10px;
+			}
 		</style>
 	</head>
     <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
@@ -344,15 +395,11 @@
                                 	<!-- // Begin Module: Standard Preheader \ -->
                                     <table border="0" cellpadding="10" cellspacing="0" width="100%">
                                     	<tr>
-                                        	<td valign="top">
-                                            	<div mc:edit="std_preheader_content">
-                                                	 Use this area to offer a short teaser of your email's content. Text here will show in the preview area of some email clients.
-                                                </div>
-                                            </td>
+    
                                             <!-- *|IFNOT:ARCHIVE_PAGE|* -->
 											<td valign="top" width="190">
                                             	<div mc:edit="std_preheader_links">
-                                                	Is this email not displaying correctly?<br /><a href="*|ARCHIVE|*" target="_blank">View it in your browser</a>.
+                                                	Is this email not displaying correctly?<br /><a href="{$AbsoluteURL}" target="_blank">View it in your browser</a>.
                                                 </div>
                                             </td>
 											<!-- *|END:IF|* -->
@@ -386,18 +433,34 @@
                                 	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
                                     	<tr>
                                             <td valign="top" class="bodyContent">
-                                
+                                            	<div class="image_header">
+                                                 	<img src="{$BaseHref}themes/doss/images/leadership_email/logo2.png" alt="Leadership Legacy" />
+                                                 	   <h1 class="h1" style="color:white;">$Title</h1>
+                                                            </div>
+                                                            
+                                                <div class="intro">
+                                                $Content
+                                                <p class="section-continue"><a href="$AbsoluteLink" style="color: white; text-decoration: none;">continue reading...</a></p>
+                                                </div>
                                                 <!-- // Begin Module: Standard Content \\ -->
                                                 <table border="0" cellpadding="20" cellspacing="0" width="100%">
                                                     <tr>
                                                         <td valign="top">
                                                             <div mc:edit="std_content00">
-                                                                <h1 class="h1">$Title</h1>
+
+                                                             
                                                                 
                                                                 <% control Pages %>
-                                                                <h2 class="h2"><a href="$AbsoluteLink">$Title</a></h2>
+                                                                <div class="section-container">
+                                                                <h2 class="h2"><a href="$AbsoluteLink" style="color: #005B82; text-decoration: none; padding-bottom: 3px;">$Title</a></h2>
+                                                                <% control Image.SetWidth(200) %>
+                                                                	<img src="$AbsoluteURL" style="float: left; padding: 10px;" />
+                                                                <% end_control %>
                                                                 <p>$Content.Summary(50)</p>
-                                                                <p><a href="$AbsoluteLink">continue reading...</a></p>
+
+                                                                <p class="section-continue"><a href="$AbsoluteLink" style="color: white; text-decoration: none;">continue reading...</a></p>
+                                                                <div class="clear"></div>
+                                                                </div>
                                                                 <% end_control %>                                                            </div>
 														</td>
                                                     </tr>
@@ -420,36 +483,34 @@
                                                 <!-- // Begin Module: Standard Footer \\ -->
                                                 <table border="0" cellpadding="10" cellspacing="0" width="100%">
                                                     <tr>
-                                                        <td colspan="2" valign="middle" id="social">
+                                                        <!--<td colspan="2" valign="middle" id="social">
                                                             <div mc:edit="std_social">
                                                                 &nbsp;<a href="*|TWITTER:PROFILEURL|*">follow on Twitter</a> | <a href="*|FACEBOOK:PROFILEURL|*">friend on Facebook</a> | <a href="*|FORWARD|*">forward to a friend</a>&nbsp;
                                                             </div>
-                                                        </td>
+                                                        </td>-->
                                                     </tr>
                                                     <tr>
                                                         <td valign="top" width="350">
                                                             <div mc:edit="std_footer">
-																<em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
+                                                            <em>Copyright &copy;$Now.Year</em>
+                                                            <img src="{$BaseHref}{$ThemeDir}/images/leadership_email/dsl_logo.png" alt="The University of Iowa - Division of Student Life" />
+																
 																<br />
-																*|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|*
+										
 																<br />
-																<strong>Our mailing address is:</strong>
-																<br />
-																*|HTML:LIST_ADDRESS_HTML|**|END:IF|* 
+						
                                                             </div>
                                                         </td>
                                                         <td valign="top" width="190" id="monkeyRewards">
-                                                            <div mc:edit="monkeyrewards">
-                                                                *|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
-                                                            </div>
+                          
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td colspan="2" valign="middle" id="utility">
+                                                       <!-- <td colspan="2" valign="middle" id="utility">
                                                             <div mc:edit="std_utility">
                                                                 &nbsp;<a href="*|UNSUB|*">unsubscribe from this list</a> | <a href="*|UPDATE_PROFILE|*">update subscription preferences</a>&nbsp;
                                                             </div>
-                                                        </td>
+                                                        </td>-->
                                                     </tr>
                                                 </table>
                                                 <!-- // End Module: Standard Footer \\ -->
