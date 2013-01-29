@@ -6,7 +6,7 @@
  * 
  * @package googlesitemaps
  */
-class GoogleSitemapDecorator extends SiteTreeDecorator {
+class GoogleSitemapDecorator extends SiteTreeExtension {
 	
 	function extraStatics() {
 		return array(
