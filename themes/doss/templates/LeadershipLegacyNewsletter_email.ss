@@ -351,13 +351,13 @@
 			
 			.section-container {
 				background-color: #f9f2d2;
-				padding: 10px;
-				margin: 10px 0;
-				border: 1px solid #ddd;
+				/*padding: 10px;
+				margin: 10px 0;*/
+				/*border: 1px solid #ddd;*/
 			}
 			
 			.section-container h2 {
-				border-bottom: 1px dashed #005B82;
+
 				padding-bottom: 3px;
 			}
 			
@@ -414,36 +414,44 @@
                     	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer">
                         	<tr>
                             	<td align="center" valign="top">
-                                    <!-- // Begin Template Header \\ -->
-                                	<!--<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateHeader">
-                                        <tr>
-                                            <td class="headerContent">
-                                            
-                                            	<img src="http://gallery.mailchimp.com/653153ae841fd11de66ad181a/images/placeholder_600.gif" style="max-width:600px;" id="headerImage campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext />
-                                            
-                                            </td>
-                                        </tr>
-                                    </table>-->
-                                    <!-- // End Template Header \\ -->
+                     
                                 </td>
                             </tr>
                         	<tr>
-                            	<td align="center" valign="top">
+                            	<td align="center" valign="top" bgcolor="#333333" >
                                     <!-- // Begin Template Body \\ -->
-                                	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
+                                	<table border="0" cellpadding="0" cellspacing="0" width="600" bcolor="#333333" >
                                     	<tr>
-                                            <td valign="top" class="bodyContent">
+                                            <td valign="top" class="bodyContent" bgcolor="#333333" style="background-color: #4A4A4A;" >
                                             	<div class="image_header">
                                                  	<img src="{$BaseHref}themes/doss/images/leadership_email/logo2.png" alt="Leadership Legacy" />
                                                  	   <h1 class="h1" style="color:white;">$Title</h1>
-                                                            </div>
+                                                   </div>
+                                                   
+                                            </td>
+                                    	</tr>
+                                	</table>
+                                	<table border="0" cellpadding="10" cellspacing="0" width="600" id="templateBody">
+                                    	<tr>
+                                            <td valign="top" class="bodyContent">
+
                                                             
                                                 <div class="intro">
                                                 $Content
-                                                <p class="section-continue"><a href="$AbsoluteLink" style="color: white; text-decoration: none;">continue reading...</a></p>
+                                                
+                                               	<table width="150" align="right" bgcolor="#005B82">
+		                                        	<tr>
+		                                            	<td>
+		                                            	<center><a href="$AbsoluteLink" style="color: white; text-decoration: none;">continue reading...</a></center>
+		                                            	</td>
+		                                        	</tr>
+                                                </table>
+                     
                                                 </div>
                                                 <!-- // Begin Module: Standard Content \\ -->
-                                                <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                <br />
+                                                <br />
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%" >
                                                     <tr>
                                                         <td valign="top">
                                                             <div mc:edit="std_content00">
@@ -451,16 +459,41 @@
                                                              
                                                                 
                                                                 <% control Pages %>
-                                                                <div class="section-container">
-                                                                <h2 class="h2"><a href="$AbsoluteLink" style="color: #005B82; text-decoration: none; padding-bottom: 3px;">$Title</a></h2>
-                                                                <% control Image.SetWidth(200) %>
-                                                                	<img src="$AbsoluteURL" style="float: left; padding: 10px;" />
-                                                                <% end_control %>
-                                                                <p>$Content.Summary(50)</p>
-
-                                                                <p class="section-continue"><a href="$AbsoluteLink" style="color: white; text-decoration: none;">continue reading...</a></p>
-                                                                <div class="clear"></div>
-                                                                </div>
+                                                                <table bgcolor="#F9F2D2" style="border: 1px solid #ddd;" cellpadding="4" cellspacing="4" >
+	                                                                <tbody>
+		                                                                <tr>
+			                                                                <td colspan="2" style="padding: 10px;">
+				                                                        
+				                                                                <h2 class="h2"><a href="$AbsoluteLink" style="color: #005B82; text-decoration: none; padding-bottom: 3px;">$Title</a></h2>
+			                                                                </td>
+		                                                                </tr>
+		                                                                <tr>
+		                                                                <td valign="top" style="padding: 10px;">
+			                                                                <% control Image.SetWidth(200) %>
+			                                                                	<img src="$AbsoluteURL" style="float: left; padding: 10px;" />
+				                                                                <% end_control %>
+				                                                        </td>
+				                                                        <td valign="top">
+				                                                                <p>$Content.Summary(50)</p>
+			
+				                                                          
+			                                                                </td>
+		                                                                </tr>
+		                                                                <tr>
+		                                                                <td colspan="2" align="right">
+									                                       	<table width="150" align="right" >
+											                                        	<tr>
+											                                            	<td>
+											                                            	<center><a href="$AbsoluteLink" style="color: #5182BB; text-decoration: none;">continue reading...</a></center>
+											                                            	</td>
+											                                        	</tr>
+									                                         </table>
+		                                                                </td>
+		                                                                </tr>
+		                                                                
+	                                                                </tbody>
+                                                                </table>
+                                                                <br />
                                                                 <% end_control %>                                                            </div>
 														</td>
                                                     </tr>
@@ -493,10 +526,11 @@
                                                         <td valign="top" width="350">
                                                             <div mc:edit="std_footer">
                                                             <em>Copyright &copy;$Now.Year</em>
-                                                            <img src="{$BaseHref}{$ThemeDir}/images/leadership_email/dsl_logo.png" alt="The University of Iowa - Division of Student Life" />
-																
+                                                            <a href="http://studentlife.uiowa.edu/"><img src="{$BaseHref}{$ThemeDir}/images/leadership_email/dsl_logo.png" alt="The University of Iowa - Division of Student Life" />
+                                                            </a>
 																<br />
-										
+							<a href="http://givetoiowa.org/studentlife/"><img src="{$BaseHref}{$ThemeDir}/images/leadership_email/give.png" alt="Donate to us">
+							</a>									
 																<br />
 						
                                                             </div>
