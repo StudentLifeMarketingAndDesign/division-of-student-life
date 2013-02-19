@@ -34,9 +34,9 @@ class AskQuestion extends SiteTree {
 		$categorySet = DataObject::get("QuestionCategory");
 	
 		$fields = parent::getCMSFields();
-		$fields->removeFieldFromTab('Root.Content.Main', 'Content');
+		$fields->removeFieldFromTab('Root.Main', 'Content');
 		
-		$fields->addFieldToTab('Root.Content.Main', new DropdownField(
+		$fields->addFieldToTab('Root.Main', new DropdownField(
 		    'QuestionCategoryID',
 		    'What category does this question fall under?',
 		    Dataobject::get("QuestionCategory")->map("ID", "Name", "Please Select"),
@@ -45,18 +45,18 @@ class AskQuestion extends SiteTree {
 			)
 		);
 		
-		/*$fields->addFieldToTab('Root.Content.Main', new DropdownField('QuestionCategory', 'What category does this question fall under?', $categorySet->toDropdownMap('ID','Name')));*/
+		/*$fields->addFieldToTab('Root.Main', new DropdownField('QuestionCategory', 'What category does this question fall under?', $categorySet->toDropdownMap('ID','Name')));*/
 		
 		
-		$fields->addFieldToTab('Root.Content.Main', new ReadOnlyField('AskerName','Asking Person\'s Name (NOT displayed on the website)'));
-$fields->addFieldToTab('Root.Content.Main', new ReadOnlyField('AskerEmail','Asking Person\'s Email Address (NOT displayed on the website)'));
-		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('Content','Question:', 4));
-		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('Answer','Answer', 4));
+		$fields->addFieldToTab('Root.Main', new ReadOnlyField('AskerName','Asking Person\'s Name (NOT displayed on the website)'));
+$fields->addFieldToTab('Root.Main', new ReadOnlyField('AskerEmail','Asking Person\'s Email Address (NOT displayed on the website)'));
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content','Question:', 4));
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Answer','Answer', 4));
 	/*	
 		if(!($this->Status == "Published" )) {
-			$fields->addFieldToTab('Root.Content.Main', new LabelField('PublishedLabel', '<p style="font-size: 13px; color: orange;">This question is NOT published and cannot be seen on the website yet. Click Save and Publish below to approve it.</p>', null, $allowHTML = true));
+			$fields->addFieldToTab('Root.Main', new LabelField('PublishedLabel', '<p style="font-size: 13px; color: orange;">This question is NOT published and cannot be seen on the website yet. Click Save and Publish below to approve it.</p>', null, $allowHTML = true));
 		}else{
-			$fields->addFieldToTab('Root.Content.Main', new LabelField('PublishedLabel', '<p style="font-size: 13px; color: green;">This question is visible on the website right now.</p>', null, $allowHTML = true));
+			$fields->addFieldToTab('Root.Main', new LabelField('PublishedLabel', '<p style="font-size: 13px; color: green;">This question is visible on the website right now.</p>', null, $allowHTML = true));
 		}
 		*/
 		

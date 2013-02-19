@@ -14,7 +14,7 @@
 		
 					<div class="assessment preview first multicultural">
 						<div class="assessment-content">
-							<h3><a href="$Link">$Title <span>published on $PublishedDate.Format(F j&#44; Y)</span></span></a></h3>
+							<h3><a href="$Link">$Title <span>published on $PublishedDate.Format(F j), $PublishedDate.Format(Y)</span></span></a></h3>
 							<p>$Content.Summary(15) <a href="$Link">[...] more</a></p>
 							<p class="read-more"><a href="$Link">Read More...</a></p>
 						</div>
@@ -28,7 +28,7 @@
 			<h2>More Reports</h2>
 			<ul>
 				<% control MulticulturalReports(100,3) %>
-					<li><a href="$Link"><strong>$Title</strong> - published on $PublishedDate.Format(F j&#44; Y)</a></li>
+					<li><a href="$Link"><strong>$Title</strong> - published on $PublishedDate.Format(F j), $PublishedDate.Format(Y)</a></li>
 				<% end_control %>
 			</ul>
 		

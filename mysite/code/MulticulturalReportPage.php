@@ -23,7 +23,7 @@ class MulticulturalReportPage extends AssessmentReportPage {
 	function getCMSFields() { 
 	
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab("Root.Content.Main", new TextField("ChangeTeamName", "Change Team Name"));
+		$fields->addFieldToTab("Root.Main", new TextField("ChangeTeamName", "Change Team Name"));
 			
 		return $fields;
 

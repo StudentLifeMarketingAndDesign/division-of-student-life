@@ -26,7 +26,7 @@ class DepartmentPerson extends DataObject {
 	function getCMSFields() { 
 	
 		$fields = parent::getCMSFields();
-		/*$fields->addFieldToTab('Root.Content.Main', new ImageField('HeaderImage','Header Image'));*/
+		/*$fields->addFieldToTab('Root.Main', new UploadField('HeaderImage','Header Image'));*/
 		
 		return $fields;
 

@@ -203,11 +203,6 @@ function toTab(p) {
 			</div>
 			
 			
-		
-			
-			
-			
-			
 		</div>
 	</div>
 </div>

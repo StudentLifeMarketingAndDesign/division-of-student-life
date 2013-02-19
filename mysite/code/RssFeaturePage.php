@@ -13,15 +13,15 @@ class RssFeaturePage extends RssBlogPostsPage {
 	function getCMSFields() { 
 	
 		$fields = parent::getCMSFields();
-		$fields->RemoveFieldFromTab("Root.Content.Main", "Content");
-		$fields->RemoveFieldFromTab("Root.Content.Main", "SideBar");
-		$fields->addFieldToTab('Root.Content.Main', new TextField('FeedURL','RSS Feed URL'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('AltFeedTitle','Alternate Feed Title (optional)'));
-		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('Content','Content'));
+		$fields->RemoveFieldFromTab("Root.Main", "Content");
+		$fields->RemoveFieldFromTab("Root.Main", "SideBar");
+		$fields->addFieldToTab('Root.Main', new TextField('FeedURL','RSS Feed URL'));
+		$fields->addFieldToTab('Root.Main', new TextField('AltFeedTitle','Alternate Feed Title (optional)'));
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content','Content'));
 
 
-	//	$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('SideBar','Sidebar'));
-	//	$fields->addFieldToTab('Root.Content.Main', new ImageField('Image','Main Image (Optional)'));
+	//	$fields->addFieldToTab('Root.Main', new HTMLEditorField('SideBar','Sidebar'));
+	//	$fields->addFieldToTab('Root.Main', new UploadField('Image','Main Image (Optional)'));
 		return $fields;
 
 	}

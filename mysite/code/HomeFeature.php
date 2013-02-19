@@ -13,7 +13,7 @@ class HomeFeature extends Page {
 	
 	function getCMSFields() { 
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab('Root.Content.Main', new ImageField('FeatureImage','Feature Image (460x305)'));
+		$fields->addFieldToTab('Root.Main', new UploadField('FeatureImage','Feature Image (460x305)'));
 		return $fields;
 	}
 

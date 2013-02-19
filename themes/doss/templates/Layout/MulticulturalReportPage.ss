@@ -9,7 +9,7 @@
 
 				<div class="assessment multicultural">
 					<div class="assessment-content">
-						<h3>$Title <span>published on $PublishedDate.Format(F j&#44; Y)</span></span></h3>
+						<h3>$Title <span>published on $PublishedDate.Format(F j), $PublishedDate.Format(Y)</span></span></h3>
 						$Content
 					 
 					</div>

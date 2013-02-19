@@ -23,11 +23,9 @@ class LeadershipLegacyNewsletter extends RssFeaturePage {
 	);
 	
 	public static $allowed_children = array(
-	
+
 		"LeadershipLegacyNewsletter"
-	
-		
-	
+
 	);
 	
 	function getCMSFields() { 
@@ -35,31 +33,43 @@ class LeadershipLegacyNewsletter extends RssFeaturePage {
 		$backgroundOptions = array ("#D39841" => "Orange", "#e9e9e9" => "White / Gray", "#FFC" => "Light Yellow", );
 		
 		$fields = parent::getCMSFields();
-		$fields->removeFieldFromTab('Root.Content.Main', "Sidebar");
-		$fields->removeFieldFromTab('Root.Content.Main', "Image");
-		$fields->removeFieldFromTab('Root.Content.Main', "Content");
-		$fields->addFieldToTab('Root.Content.Main', new CheckboxField('isCover','This is the cover page for the newsletter'));
-		/*$fields->addFieldToTab('Root.Content.Main', new DropdownField('BackgroundColor','Background Color:', $backgroundOptions));*/
+		$fields->removeFieldFromTab('Root.Main', "Sidebar");
+		$fields->removeFieldFromTab('Root.Main', "Image");
+		$fields->removeFieldFromTab('Root.Main', "Content");
+		$fields->addFieldToTab('Root.Main', new CheckboxField('isCover','This is the cover page for the newsletter'));
+		/*$fields->addFieldToTab('Root.Main', new DropdownField('BackgroundColor','Background Color:', $backgroundOptions));*/
 			
-		$fields->addFieldToTab('Root.Content.Main', new ImageField('Image','Main Image (optional)'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('Caption', 'Image Caption'));
+		$fields->addFieldToTab('Root.Main', new UploadField('Image','Main Image (optional)'));
+		$fields->addFieldToTab('Root.Main', new TextField('Caption', 'Image Caption'));
 
 	
-		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField("Content"));
-		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField("SideBox"));
-		$fields->addFieldToTab('Root.Content.Sidebar', new HTMLEditorField("FeatureBoxText"));
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField("Content"));
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField("SideBox"));
+		$fields->addFieldToTab('Root.Sidebar', new HTMLEditorField("FeatureBoxText"));
 
-		$manager =  new DataObjectManager(
-			$this,
-			'SidebarImages', // the name of the relationship
-			'SidebarImage', // the related table 
-			array(
-				"Caption" => "Caption"
-			),
-			'getCMSFields_forPopup' // the function to build the add/edit form
+		$gridFieldDisplayFields = new GridFieldDataColumns();
+		$gridFieldDisplayFields->setDisplayFields(array(
+			'Caption' => 'Caption',
+			'Image' => 'Image'
+		));
+
+		/*$gridFieldDisplayFields->setFieldFormatting(array(
+			'Image' => '$Thumbnail'
+		));*/
+
+		
+		$gridFieldConfig = GridFieldConfig_RelationEditor::create()->addComponents($gridFieldDisplayFields);
+		
+		$gridField =  new GridField(
+			'SidebarImages',
+			'Sidebar Image',
+			SidebarImage::get(),
+			$gridFieldConfig
 		);
-		$fields->addFieldToTab("Root.Content.Sidebar",$manager);
-		//$fields->addFieldToTab('Root.Content.Main', new ImageField('HeaderImage','Header Image'));		
+
+		$gridField = new GridField('SidebarImage', 'Sidebar Images', $this->SidebarImage(), $gridFieldConfig);
+		$fields->addFieldToTab("Root.Sidebar",$gridField);
+		//$fields->addFieldToTab('Root.Main', new UploadField('HeaderImage','Header Image'));		
 		return $fields;
 
 	}
@@ -139,9 +149,9 @@ class LeadershipLegacySidebarImage extends DataObject {
 
 	public function getCMSFields_forPopup()
 	{
-		return new FieldSet(
+		return new FieldList(
 			new TextField('Caption'),
-			new FileIFrameField('Image')
+			new UploadField('Image')
 		);
 	}
 
