@@ -39,21 +39,21 @@ class AssessmentCoordinatorProfile extends Page {
 		$calendarField = new DateField("PublishedDate","Published Date");
 		$calendarField->setConfig('showcalendar', true);		
 		
-		$fields->removeFieldFromTab('Root.Content.Main', "Sidebar");
-		$fields->removeFieldFromTab('Root.Content.Main', "Image");
-		$fields->removeFieldFromTab('Root.Content.Main', "Content");
+		$fields->removeFieldFromTab('Root.Main', "Sidebar");
+		$fields->removeFieldFromTab('Root.Main', "Image");
+		$fields->removeFieldFromTab('Root.Main', "Content");
 	
-		$fields->addFieldToTab('Root.Content.Main', $calendarField);
-		$fields->addFieldToTab('Root.Content.Main', new TextField("ExternalURL"));
+		$fields->addFieldToTab('Root.Main', $calendarField);
+		$fields->addFieldToTab('Root.Main', new TextField("ExternalURL"));
 
-		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField("Content"));
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField("Content"));
 		
 		
 	
-		/*$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField("Content"));*/
+		/*$fields->addFieldToTab('Root.Main', new HTMLEditorField("Content"));*/
 
 		
-		/*$fields->addFieldToTab('Root.Content.Main', new ImageField('HeaderImage','Header Image'));*/
+		/*$fields->addFieldToTab('Root.Main', new UploadField('HeaderImage','Header Image'));*/
 		
 		return $fields;
 

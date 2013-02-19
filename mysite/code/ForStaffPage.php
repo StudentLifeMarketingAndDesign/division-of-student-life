@@ -14,23 +14,23 @@ class ForStaffPage extends Page {
 	function getCMSFields() { 
 	
 		$fields = parent::getCMSFields();
-		/*$fields->removeFieldFromTab('Root.Content.Main', 'Title');
-		$fields->removeFieldFromTab('Root.Content.Main', 'MenuTitle');
-		$fields->removeFieldFromTab('Root.Content.Main', 'Content');
+		/*$fields->removeFieldFromTab('Root.Main', 'Title');
+		$fields->removeFieldFromTab('Root.Main', 'MenuTitle');
+		$fields->removeFieldFromTab('Root.Main', 'Content');
 		
 		
 		
-		$fields->addFieldToTab('Root.Content.Main', new TextField('Title','Name'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('PersonTitle','Title'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('OfficeLocation','Office Location'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('Phone','Phone Number'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('Email','Email Address'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('Website','Website Address'));
-		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('Content','Description'));*/
+		$fields->addFieldToTab('Root.Main', new TextField('Title','Name'));
+		$fields->addFieldToTab('Root.Main', new TextField('PersonTitle','Title'));
+		$fields->addFieldToTab('Root.Main', new TextField('OfficeLocation','Office Location'));
+		$fields->addFieldToTab('Root.Main', new TextField('Phone','Phone Number'));
+		$fields->addFieldToTab('Root.Main', new TextField('Email','Email Address'));
+		$fields->addFieldToTab('Root.Main', new TextField('Website','Website Address'));
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content','Description'));*/
 
 
 		
-		/*$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('SideBar','Sidebar'));*/
+		/*$fields->addFieldToTab('Root.Main', new HTMLEditorField('SideBar','Sidebar'));*/
 		
 		return $fields;
 

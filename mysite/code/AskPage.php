@@ -11,10 +11,10 @@ class AskPage extends Page {
 	
 	function getCMSFields() { 
 		$fields = parent::getCMSFields();
-		/*$fields->addFieldToTab('Root.Content.Main', new ImageField('HeaderImage','Header Image'));*/
-		$fields->removeFieldFromTab('Root.Content.Main', 'Content');
-		$fields->removeFieldFromTab('Root.Content.Main', 'Sidebar');
-		$fields->removeFieldFromTab('Root.Content.Main', 'Image');
+		/*$fields->addFieldToTab('Root.Main', new UploadField('HeaderImage','Header Image'));*/
+		$fields->removeFieldFromTab('Root.Main', 'Content');
+		$fields->removeFieldFromTab('Root.Main', 'Sidebar');
+		$fields->removeFieldFromTab('Root.Main', 'Image');
 		
 		$categoryTable = new TableField(
 			'QuestionCategory',
@@ -23,8 +23,8 @@ class AskPage extends Page {
 			array('Name' => 'TextField')
 		);
 		
-		$fields->addFieldToTab('Root.Content.Main', $categoryTable);
-		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField("Content"));
+		$fields->addFieldToTab('Root.Main', $categoryTable);
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField("Content"));
 		return $fields;
 	}
 }
@@ -62,9 +62,9 @@ class AskPage_Controller extends Page_Controller {
 	        $recaptchaField = new RecaptchaField('MyCaptcha');
 			$recaptchaField->jsOptions = array('theme' => 'white'); // optional
 	        
-	        $fields = new FieldSet(
-	        	new DropdownField('QuestionCategoryID', 'What topic does your question fall under?', $categorySet->toDropdownMap('ID','Name')),
-	            new TextareaField('Content', 'Your Question', 5),
+	        $fields = new FieldList(
+	        	new DropdownField('QuestionCategoryID', 'What topic does your question fall under?', $categorySet->map('ID','Name')),
+	            new TextareaField('Content', 'Your Question'),
 	            new TextField('AskerName', 'Your First Name'),
 	            new EmailField('AskerEmail', 'Your Email Address'),
 	            new LabelField('recaptchaLabel', 'Enter the following words:'),
@@ -77,7 +77,7 @@ class AskPage_Controller extends Page_Controller {
 	            );
 	         
 	        // Create actions
-	        $actions = new FieldSet(
+	        $actions = new FieldList(
 	            new FormAction('doAsk', 'Ask Your Question Now!')
 	        );
 

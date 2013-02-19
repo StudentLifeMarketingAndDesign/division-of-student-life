@@ -2,66 +2,70 @@
 class AnnualReportPage extends RssFeaturePage {
 
 	public static $db = array(
-
 		"Cover" => "Boolean",
 		"BackgroundColor" => "Text",
 		"FeatureBoxText" => "HTMLText"
-		
-	
 	);
 	
 	public static $has_many = array(
 		"SidebarImage" => "SidebarImage"
-	
-	
 	);
 	
 	public static $has_one = array(
 		//"Image" => "Image"
 	);
-	
+
 	public static $allowed_children = array(
-	
 		"AnnualReportPage"
-	
-		
-	
 	);
-	
+
 	function getCMSFields() { 
-		
-		$backgroundOptions = array ("#D39841" => "Orange", "#e9e9e9" => "White / Gray", "#FFC" => "Light Yellow", );
-		
+
+		$backgroundOptions = array ("#D39841" => "Orange", "#e9e9e9" => "White / Gray", "#FFC" => "Light Yellow");
+
 		$fields = parent::getCMSFields();
-		$fields->removeFieldFromTab('Root.Content.Main', "Sidebar");
-		$fields->removeFieldFromTab('Root.Content.Main', "Image");
-		$fields->removeFieldFromTab('Root.Content.Main', "Content");
-		$fields->addFieldToTab('Root.Content.Main', new CheckboxField('Cover','This is the cover page for the report'));
-		/*$fields->addFieldToTab('Root.Content.Main', new DropdownField('BackgroundColor','Background Color:', $backgroundOptions));*/
-			
-		$fields->addFieldToTab('Root.Content.Main', new ImageField('Image','Main Image (optional)'));
+		$fields->removeFieldFromTab('Root.Main', "Sidebar");
+		$fields->removeFieldFromTab('Root.Main', "Image");
+		$fields->removeFieldFromTab('Root.Main', "Content");
+		$fields->addFieldToTab('Root.Main', new CheckboxField('Cover','This is the cover page for the report'));
+		/*$fields->addFieldToTab('Root.Main', new DropdownField('BackgroundColor','Background Color:', $backgroundOptions));*/
 
-	
-		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField("Content"));
-		$fields->addFieldToTab('Root.Content.Sidebar', new HTMLEditorField("FeatureBoxText"));
+		$fields->addFieldToTab('Root.Main', new UploadField('Image','Main Image (optional)'));
 
-		$manager =  new DataObjectManager(
-			$this,
-			'SidebarImages', // the name of the relationship
-			'SidebarImage', // the related table 
-			array(
-				"Caption" => "Caption"
-			),
-			'getCMSFields_forPopup' // the function to build the add/edit form
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField("Content"));
+		$fields->addFieldToTab('Root.Sidebar', new HTMLEditorField("FeatureBoxText"));
+		
+		$gridFieldDisplayFields = new GridFieldDataColumns();
+		$gridFieldDisplayFields->setDisplayFields(array(
+			'Caption' => 'Caption',
+			'Thumbnail' => 'Thumbnail'
+		));
+
+		/*$gridFieldDisplayFields->setFieldFormatting(array(
+			'Image' => '$Thumbnail'
+		));*/
+
+		$gridFieldConfig = GridFieldConfig_RelationEditor::create()->addComponents($gridFieldDisplayFields);
+
+		$gridField =  new GridField(
+			'SidebarImages',
+			'Sidebar Image',
+			SidebarImage::get(),
+			$gridFieldConfig
 		);
-		$fields->addFieldToTab("Root.Content.Sidebar",$manager);
-		//$fields->addFieldToTab('Root.Content.Main', new ImageField('HeaderImage','Header Image'));		
+
+		$gridField = new GridField('SidebarImage', 'Sidebar Images', $this->SidebarImage(), $gridFieldConfig);
+		// http://www.silverstripe.org/customising-the-cms/show/20297
+		/*$columns = $gridField->getConfig()->getComponentByType('GridFieldDataColumns'); //new line that needs to be added to your code
+		$columns->setFieldCasting(array( //change $gridfield in your code to $columns 
+			'Image' => '$URL' 
+		));*/
+		//echo '<pre>'; print_r( $gridField->getList() ); echo '</pre>'; exit;
+		$fields->addFieldToTab("Root.Sidebar", $gridField);
+		//$fields->addFieldToTab('Root.Main', new UploadField('HeaderImage','Header Image'));		
 		return $fields;
 
 	}
-	
-
-	
 
 }
 
@@ -126,11 +130,32 @@ class SidebarImage extends DataObject {
 		"AnnualReportPage" => "AnnualReportPage"
 	);
 
+	/*public static $summary_fields = array(
+  		'Thumbnail'=>'Thumbnail',
+  		'Caption' => 'Caption'
+ 	);*/
+
+ 	public function getThumbnail() {
+		if ($Image = $this->Image()) {
+        	return $Image->CMSThumbnail();
+        } else {
+        	return '(No Image)';
+        }
+	}
+
+	public function getCMSFields()
+	{
+		return new FieldList(
+			new TextField('Caption'),
+			new UploadField('Image')
+		);
+	}
+
 	public function getCMSFields_forPopup()
 	{
-		return new FieldSet(
+		return new FieldList(
 			new TextField('Caption'),
-			new FileIFrameField('Image')
+			new UploadField('Image')
 		);
 	}
 

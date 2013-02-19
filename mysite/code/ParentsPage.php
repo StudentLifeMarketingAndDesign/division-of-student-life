@@ -20,12 +20,12 @@ class ParentsPage extends Page {
 	function getCMSFields() { 
 	
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab('Root.Content.Main', new ImageField('Ad1Image','Parents Ad Image'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('Ad1URL','Parents Ad URL'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('Ad1Description','Describe the Ad'));
+		$fields->addFieldToTab('Root.Main', new UploadField('Ad1Image','Parents Ad Image'));
+		$fields->addFieldToTab('Root.Main', new TextField('Ad1URL','Parents Ad URL'));
+		$fields->addFieldToTab('Root.Main', new TextField('Ad1Description','Describe the Ad'));
 
 
-		/*$fields->addFieldToTab('Root.Content.Main', new ImageField('HeaderImage','Header Image'));*/
+		/*$fields->addFieldToTab('Root.Main', new UploadField('HeaderImage','Header Image'));*/
 		
 		return $fields;
 

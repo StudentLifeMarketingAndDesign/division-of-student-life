@@ -12,8 +12,8 @@ class Page extends SiteTree {
 	function getCMSFields() { 
 	
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('SideBar','Sidebar'));
-		$fields->addFieldToTab('Root.Content.Main', new ImageField('Image','Main Image (Optional)'));
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField('SideBar','Sidebar'));
+		$fields->addFieldToTab('Root.Main', new UploadField('Image','Main Image (Optional)'));
 		return $fields;
 
 	}
@@ -55,11 +55,11 @@ class Page_Controller extends ContentController {
     function SearchForm() {
         $searchText = isset($this->Query) ? $this->Query : '';
          
-        $fields = new FieldSet(
+        $fields = new FieldList(
             new TextField("Search", "", $searchText)
         );
  
-        $actions = new FieldSet(
+        $actions = new FieldList(
             new FormAction('results', 'Search')
         );
          

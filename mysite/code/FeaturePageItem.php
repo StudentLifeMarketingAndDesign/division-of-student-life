@@ -15,8 +15,8 @@ class FeaturePageItem extends SiteTree {
 	function getCMSFields() { 
 	
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab('Root.Content.Main', new ImageField('Image','Image - 425x240px'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('ExternalURL','External Link URL'));
+		$fields->addFieldToTab('Root.Main', new UploadField('Image','Image - 425x240px'));
+		$fields->addFieldToTab('Root.Main', new TextField('ExternalURL','External Link URL'));
 		
 		return $fields;
 

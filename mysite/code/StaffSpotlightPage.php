@@ -19,11 +19,11 @@ class StaffSpotlightPage extends Page {
 	function getCMSFields() { 
 	
 		$fields = parent::getCMSFields();
-		/*$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('SideBar','Sidebar'));*/
+		/*$fields->addFieldToTab('Root.Main', new HTMLEditorField('SideBar','Sidebar'));*/
 		
-		$fields->addFieldToTab('Root.Content.Main', new TextField('StaffTitle','Title'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('Department','Department'));
-		$fields->addFieldToTab('Root.Content.Main', new ImageField('Headshot','Image'));
+		$fields->addFieldToTab('Root.Main', new TextField('StaffTitle','Title'));
+		$fields->addFieldToTab('Root.Main', new TextField('Department','Department'));
+		$fields->addFieldToTab('Root.Main', new UploadField('Headshot','Image'));
 
 		
 		return $fields;

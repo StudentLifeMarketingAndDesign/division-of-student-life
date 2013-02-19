@@ -13,7 +13,7 @@ class StaffSpotlightHolder extends Page {
 	function getCMSFields() { 
 	
 		$fields = parent::getCMSFields();
-		/*$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('SideBar','Sidebar'));*/
+		/*$fields->addFieldToTab('Root.Main', new HTMLEditorField('SideBar','Sidebar'));*/
 		
 		return $fields;
 

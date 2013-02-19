@@ -31,18 +31,18 @@ class DepartmentPage extends Page {
 	function getCMSFields() { 
 	
 		$fields = parent::getCMSFields();
-		$fields->removeFieldFromTab('Root.Content.Main', "Sidebar");
-		$fields->removeFieldFromTab('Root.Content.Main', "Image");
-		$fields->removeFieldFromTab('Root.Content.Main', "Content");
+		$fields->removeFieldFromTab('Root.Main', "Sidebar");
+		$fields->removeFieldFromTab('Root.Main', "Image");
+		$fields->removeFieldFromTab('Root.Main', "Content");
 		
-		$fields->addFieldToTab('Root.Content.Main', new TextField("Phone", "Phone Number"));
-		$fields->addFieldToTab('Root.Content.Main', new TextField("Address"));
-		$fields->addFieldToTab('Root.Content.Main', new TextField("GoogleMapURL", "Google Maps URL (optional)"));
-		$fields->addFieldToTab('Root.Content.Main', new TextField("WebsiteURL"));
+		$fields->addFieldToTab('Root.Main', new TextField("Phone", "Phone Number"));
+		$fields->addFieldToTab('Root.Main', new TextField("Address"));
+		$fields->addFieldToTab('Root.Main', new TextField("GoogleMapURL", "Google Maps URL (optional)"));
+		$fields->addFieldToTab('Root.Main', new TextField("WebsiteURL"));
 
 		
-		$fields->addFieldToTab('Root.Content.Main', new LabelField("Department Contacts:"));
-		$fields->addFieldToTab("Root.Content.Main", new ComplexTableField(
+		$fields->addFieldToTab('Root.Main', new LabelField("Department Contacts:", "Department Contacts:"));
+		$fields->addFieldToTab("Root.Main", new ComplexTableField(
 			$this,
 			'Department People',
 			'DepartmentPerson',
@@ -52,10 +52,10 @@ class DepartmentPage extends Page {
 		
 
 		
-		/*$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField("Content"));*/
+		/*$fields->addFieldToTab('Root.Main', new HTMLEditorField("Content"));*/
 
 		
-		/*$fields->addFieldToTab('Root.Content.Main', new ImageField('HeaderImage','Header Image'));*/
+		/*$fields->addFieldToTab('Root.Main', new UploadField('HeaderImage','Header Image'));*/
 		
 		return $fields;
 
