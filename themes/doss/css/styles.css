@@ -1117,10 +1117,10 @@ img.right {
 	border-top: none;*/
 	margin-top: 25px;
 	margin-right: 25px;
-	  -moz-box-shadow: 0 1px 4px #666;
-  -webkit-box-shadow: 0 1px 4px #666;
-  box-shadow: 0 1px 4px #666;
-  background-image: url(../images/linedpaper_background.png);
+	  -moz-box-shadow: 0 1px 8px rgba(20,20,20,0.2);
+  -webkit-box-shadow: 0 1px 8px rgba(20,20,20,0.2);
+  box-shadow: 0 1px 8px rgba(20,20,20,0.2);
+  background-image: url(../images/creampaper-background.png);
 }
 
 .department.first {
