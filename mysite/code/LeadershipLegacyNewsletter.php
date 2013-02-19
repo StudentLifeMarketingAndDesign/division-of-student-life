@@ -50,7 +50,7 @@ class LeadershipLegacyNewsletter extends RssFeaturePage {
 		$gridFieldDisplayFields = new GridFieldDataColumns();
 		$gridFieldDisplayFields->setDisplayFields(array(
 			'Caption' => 'Caption',
-			'Image' => 'Image'
+			'Thumbnail' => 'Thumbnail'
 		));
 
 		/*$gridFieldDisplayFields->setFieldFormatting(array(
@@ -153,6 +153,14 @@ class LeadershipLegacySidebarImage extends DataObject {
 			new TextField('Caption'),
 			new UploadField('Image')
 		);
+	}
+	
+	public function getThumbnail() {
+		if ($Image = $this->Image()) {
+        	return $Image->CMSThumbnail();
+        } else {
+        	return '(No Image)';
+        }
 	}
 
 }

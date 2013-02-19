@@ -38,7 +38,7 @@ class AnnualReportPage extends RssFeaturePage {
 		$gridFieldDisplayFields = new GridFieldDataColumns();
 		$gridFieldDisplayFields->setDisplayFields(array(
 			'Caption' => 'Caption',
-			'Image' => 'Image'
+			'Thumbnail' => 'Thumbnail'
 		));
 
 		/*$gridFieldDisplayFields->setFieldFormatting(array(
@@ -136,11 +136,11 @@ class SidebarImage extends DataObject {
  	);*/
 
  	public function getThumbnail() {
-		if ($this->ID) {
-			return $this->SetWidth(80);
-		} else {
-			return '(No Image)';
-		}
+		if ($Image = $this->Image()) {
+        	return $Image->CMSThumbnail();
+        } else {
+        	return '(No Image)';
+        }
 	}
 
 	public function getCMSFields()
