@@ -14,7 +14,7 @@
 		
 					<div class="assessment preview first">
 						<div class="assessment-content">
-							<h3><a href="$Link">$Title <span>published on $PublishedDate.Format("F j, Y")</span></span></a></h3>
+							<h3><a href="$Link">$Title <span>published on $PublishedDate.Format("F j, Y")</span></a></h3>
 							<p>$Content.Summary(15) <a href="$Link">[...] more</a></p>
 							<p class="read-more"><a href="$Link">Read More...</a></p>
 						</div>
