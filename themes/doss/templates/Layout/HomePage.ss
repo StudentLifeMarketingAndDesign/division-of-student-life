@@ -100,7 +100,7 @@ function toTab(p) {
 		<% control RssBlogPosts(3, http://blog.studentlife.uiowa.edu/feed/) %>
 		<div class="post">
 			<h2 class="post-header"><a href="$Link">$Title</a></h2>
-			<p class="post-details">Posted on $Date.Format(F j&#44; Y)</p>
+			<p class="post-details">Posted on $Date.Format("F j, Y")</p>
 			<div class="post-content">
 				<p>$Description</p>					
 			</div>
