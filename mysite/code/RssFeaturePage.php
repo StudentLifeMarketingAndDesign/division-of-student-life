@@ -1,5 +1,5 @@
 <?php
-class RssFeaturePage extends RssBlogPostsPage {
+class RssFeaturePage extends Page {
 
 	public static $db = array(
 		"FeedURL" => "Text",
@@ -26,7 +26,7 @@ class RssFeaturePage extends RssBlogPostsPage {
 
 	}
 }
-class RssFeaturePage_Controller extends RssBlogPostsPage_Controller {
+class RssFeaturePage_Controller extends Page_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -49,7 +49,7 @@ class RssFeaturePage_Controller extends RssBlogPostsPage_Controller {
 	
 	public function RssPosts(){
 		$feedURL = $this->FeedURL;
-		$posts = parent::RssBlogPosts(5, $feedURL);
+		$posts = $this->RssDisplay(5, $feedURL);
 		
 		if($posts){return $posts;}
 	}

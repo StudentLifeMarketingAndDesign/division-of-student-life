@@ -36,7 +36,7 @@ class TomRocklinPage extends Page {
 
 	}
 }
-class TomRocklinPage_Controller extends RssBlogPostsPage_Controller {
+class TomRocklinPage_Controller extends Page_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the

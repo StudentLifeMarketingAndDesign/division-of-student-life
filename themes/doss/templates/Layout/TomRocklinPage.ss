@@ -19,8 +19,8 @@
 		<div id="at-a-glance" class="side-feature shadow">
 		<h2>Tom's Take</h2>
 		<ul class="rocklin-posts">
-		<% control RssBlogPosts(3,http://blog.studentlife.uiowa.edu/blog/category/toms-take/feed/) %>
-		<li><a href="$Link">$Title</a> posted on $Date.Format(F j&#44; Y) <p>$Description.Summary(20)</p></li>
+		<% control RssDisplay(3,http://blog.studentlife.uiowa.edu/blog/category/toms-take/feed/) %>
+		<li><a href="$Link">$Title</a> posted on $Date.Format("F j&#44; Y") <p>$Description.Summary(20)</p></li>
 		<% end_control %>
 		</ul>
 		

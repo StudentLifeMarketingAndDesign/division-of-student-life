@@ -12,7 +12,7 @@ class HomePage extends Page {
 	}
 	
 }
-class HomePage_Controller extends RssBlogPostsPage_Controller {
+class HomePage_Controller extends Page_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the

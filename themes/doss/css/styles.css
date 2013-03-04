@@ -383,25 +383,32 @@ caption {
   #navigation ul {
     height: 14px;
     position: relative;
-    margin: 65px 0 0 475px;
+    margin: 63px 0 0 350px;
     padding: 0; }
     #navigation ul li {
       list-style: none;
-      position: absolute;
+      float: left;
       top: 0;
-      margin: 0;
-      padding: 0; }
+      margin: 0 8px;
+      padding: 0;
+      text-align: center;
+      
+      
+       }
     #navigation ul li, #navigation ul a {
       display: block;
       height: 20px; }
     #navigation ul a {
-      position: absolute;
       display: block;
-      text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);      
+      text-shadow: 1px 1px 3px rgba(25, 25, 25, 0.8);      
       color: white;
       overflow: hidden;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: normal;
+      font-family: 'Lato', 'Arial', sans;
+      word-spacing: 0.2em;
+      text-align: center;
+      
        }
       
       #navigation ul a:hover{
@@ -424,7 +431,7 @@ caption {
       background-position: -490px 0px; }*/
     
     #navigation ul li#nav-student-success a {
-      left: -85px;
+      left: -120px;
       width: 114px;
       background-position: 0px 0px; }
     #navigation ul li#nav-campus-life a {
@@ -453,7 +460,7 @@ caption {
       
    #navigation ul li#nav-initiatives a {
       left: 412px;
-      width: 64px;
+      width: 70px;
       background-position: -326px 0px; }     
       
     #navigation ul li#nav-home a:hover {

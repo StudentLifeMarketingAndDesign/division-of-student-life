@@ -91,7 +91,8 @@
 <body id="home" <% if URLSegment = home %> onLoad="javascript:preloader() "<% end_if %>>
 
 
-<% include Header %>
+
+<% include DivisionBarNonResponsive %>
 <% include Navigation %>
 
 	$Layout
