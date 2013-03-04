@@ -97,7 +97,7 @@ function toTab(p) {
 <div class="container">
 <div id="news" class="content twothirds shadow">
 		<h2 class="content-header"><a href="http://blog.studentlife.uiowa.edu/">News</a> <a href="http://blog.studentlife.uiowa.edu/feed/"><img src="$ThemeDir/images/rss-icon.png" alt="RSS" /></a></h2>
-		<% control RssDisplay(3, http://afterclass.uiowa.edu/events/newrss) %>
+		<% control RssDisplay(3, http://blog.studentlife.uiowa.edu/feed/) %>
 		<div class="post">
 			<h2 class="post-header"><a href="$Link">$Title</a></h2>
 			<p class="post-details">Posted on $Date.Format("F j&#44; Y")</p>
