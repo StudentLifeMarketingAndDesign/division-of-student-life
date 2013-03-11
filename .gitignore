@@ -1,1 +1,4 @@
 mysite/_config.php
+*.DS_STORE
+
+.DS_Store
