@@ -73,7 +73,7 @@
 			
 			<% end_control %>
 		</ul>
-		<p><a href="http://blog.studentlife.uiowa.edu/">See all blog posts</a></p>
+		<p class="read-more"><a href="http://blog.studentlife.uiowa.edu/">See all blog posts</a></p>
 		</div>
 		
 		<% end_if %>

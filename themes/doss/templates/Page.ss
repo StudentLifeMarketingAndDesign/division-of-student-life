@@ -15,7 +15,6 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">-->
 
   <% require themedCSS(styles) %> 
-  <% require themedCSS(topbar) %>
   <link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet" type="text/css" >
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> 
 
@@ -92,7 +91,7 @@
 
 
 
-<% include DivisionBarNonResponsive %>
+<% include DivisionBar %>
 <% include Navigation %>
 
 	$Layout

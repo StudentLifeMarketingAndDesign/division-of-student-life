@@ -99,18 +99,18 @@ function toTab(p) {
 		<h2 class="content-header"><a href="http://blog.studentlife.uiowa.edu/">News</a> <a href="http://blog.studentlife.uiowa.edu/feed/"><img src="$ThemeDir/images/rss-icon.png" alt="RSS" /></a></h2>
 		<% control RssDisplay(3, http://blog.studentlife.uiowa.edu/feed/) %>
 		<div class="post">
-			<h2 class="post-header"><a href="$Link">$Title</a></h2>
+			<h2 class="post-header"><a href="$Link" target="_blank">$Title</a></h2>
 			<p class="post-details">Posted on $Date.Format("F j&#44; Y")</p>
 			<div class="post-content">
 				<p>$Description</p>					
 			</div>
-			<p class="post-read-more"><a href="$Link">Read More</a></p>
+			<p class="post-read-more"><a href="$Link" target="_blank">Read More</a></p>
 			<div class="clear-right"></div>
 		</div>
 		<% end_control %>
 		<div id="news-footer">
 			<ul>
-				<li id="news-footer-browse"><a href="http://blog.studentlife.uiowa.edu/">Browse the News Archives</a></li>
+				<li id="news-footer-browse"><a href="http://blog.studentlife.uiowa.edu/" target="_blank">Browse the News Archives</a></li>
 				<!-- <li id="news-footer-vp_blog"><a href="#">Read the Vice PresidentÍs Blog</a></li> -->
 			</ul>
 		</div>

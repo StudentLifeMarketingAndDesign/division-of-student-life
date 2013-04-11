@@ -2,7 +2,7 @@
 <div class="container">
 
 <div id="student-learning" class="content twothirds shadow">
-<p class="all-assessments-link"><a href="$Parent.Link">See all assessment reports</a></p>
+<p class="all-assessments-link read-more"><a href="$Parent.Link">See all assessment reports</a></p>
 		<% if Image %>
 			<% control Image.SetWidth(570) %><img src="$URL" class="photo" /><% end_control %>
 		<% end_if %>

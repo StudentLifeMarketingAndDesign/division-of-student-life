@@ -9,14 +9,14 @@ class Page extends SiteTree {
 		"Image" => "Image"
 	);
 	
-	function getCMSFields() { 
+	/*function getCMSFields() { 
 	
 		$fields = parent::getCMSFields();
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('SideBar','Sidebar'));
 		$fields->addFieldToTab('Root.Main', new UploadField('Image','Main Image (Optional)'));
 		return $fields;
 
-	}
+	}*/
 }
 class Page_Controller extends ContentController {
 
