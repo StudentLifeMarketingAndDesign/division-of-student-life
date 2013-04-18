@@ -1702,7 +1702,7 @@ p.all-assessments-link.read-more a{
 
 
 .assessment-coordinator {
-	min-height: 93px;
+	min-height: 150px;
 	padding: 20px;
 	background-image: url(../images/coordinator_bg.png);
 	margin: 10px 0;

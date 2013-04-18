@@ -28,19 +28,10 @@
 			
 			<% end_control %>
 		</ul>
-		<p><a href="http://blog.studentlife.uiowa.edu/">See all blog posts</a></p>
+		<p><a href="http://blog.studentlife.uiowa.edu/">See all blog posts...</a></p>
 		</div>
 		
 		<% end_if %>
-		
-		<!--<div id="contact" class="side-box">
-			<h3>Contact Us</h3>
-			<form action="#" method="get" accept-charset="utf-8">
-				<input type="text" name="name" value="" id="name" placeholder="Your name..." class="text" /><br/>
-				<input type="text" name="email" value="" id="email" placeholder="Your email..." class="text" /><br/>
-				<textarea name="comment" placeholder="Message..."></textarea><br/>
-				<input type="submit" value="Contact Us" class="button" />
-			</form>
-		</div>-->
+
 	</div>
 </div>

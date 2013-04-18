@@ -11,5 +11,6 @@
 			<% end_control %>
 		</ul>
 		<p class="read-more"><a href="http://blog.studentlife.uiowa.edu/">See all blog posts</a></p>
+		<div class="clearfix"></div>
 		</div>
 		

@@ -14,7 +14,7 @@
 		
 					<div class="assessment preview first">
 						<div class="assessment-content">
-							<h3><a href="$Link">$Title <span>published on $PublishedDate.Format("F j, Y")</span></a></h3>
+							<h3><a href="$Link">$Title <% if $PublishedDate %><span>published on $PublishedDate.Format("F j, Y")</span><% end_if %></a></h3>
 							<p>$Content.Summary(15) <a href="$Link">[...] more</a></p>
 							<p class="read-more"><a href="$Link">Read More...</a></p>
 						</div>
@@ -24,16 +24,14 @@
 		<% end_if %>
 		
 		<div style="clear: left"></div>
-		<h2>More Assessments</h2>
-		<ul>
-		<% control getAssessments(100,3) %>
-		
-		<li><a href="$Link"><strong>$Title</strong> - published on $Date.Format("F j, Y")</a></li>
-		
-		
-		<% end_control %>
-		</ul>
-		
+		<% if getAssessments(100,3) %>
+			<h2>More Assessments</h2>
+			<ul>
+			<% control getAssessments(100,3) %>
+				<li><a href="$Link"><strong>$Title</strong> - published on $Date.Format("F j, Y")</a></li>
+			<% end_control %>
+			</ul>
+		<% end_if %>
 
 </div><!-- end container -->
 	<div class="sidebar">

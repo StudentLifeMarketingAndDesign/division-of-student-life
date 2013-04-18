@@ -9,7 +9,7 @@
 
 				<div class="assessment">
 					<div class="assessment-content">
-						<h3>$Title <span>published on $PublishedDate.Format("F j, Y")</span></h3>
+						<h3>$Title <% if $PublishedDate %><span>published on $PublishedDate.Format("F j, Y")</span><% end_if %></h3>
 						$Content
 					 
 					</div>

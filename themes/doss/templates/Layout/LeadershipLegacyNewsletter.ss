@@ -64,8 +64,7 @@
 				<h3>In This Issue</h3>
 				<ul class="leadership-legacy-newsletter-toc">
 
-					<% control Pages %>
-					
+					<% control Menu(3) %>
 					<li><a href="$Link">$MenuTitle</a></li>
 					<% end_control %>
 				
@@ -83,12 +82,15 @@
 </div>
 	<div class="leadership-legacy-newsletter-nav">
 		<ul>
+		
+			<% if Parent.ClassName == "LeadershipLegacyNewsletter" %>		
+				<% control Parent %>
+				<li class="$LinkOrCurrent"><a href="$Link">$MenuTitle</a></li>
+				<% end_control %>			
+			<% end_if %>
 			
-			<% control Cover %>
-			<li class="$LinkOrCurrent"><a href="$Link">$MenuTitle</a></li>
-
-			<% end_control %>
-			<% control Pages %>
+			
+			<% control Menu(3) %>
 			<li class="$LinkOrCurrent"><a href="$Link">$MenuTitle</a></li>
 			
 			<% end_control %>
