@@ -2,15 +2,30 @@
 	width: 100%;
 	height: 42px;
 }
-
+/* chrome phone number color */
+span.gc-cs-link {
+color: #E9F0E1;
+}
 body {
 	background: url('dsl-back.png');
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+a {
+	text-decoration: none;
+}
+
+
+.external-link {
+    background: url(external.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding-right: 13px;
+    color: #ABCA83;
+}
+
 .md-body{
 	background: url('light_to.png');	
-	margin-top: 40px;
 	min-height:1000px;
 }
 
@@ -18,6 +33,16 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;	
+}
+
+.m {
+	color: #A3D4D1;
+	
+	
+}
+
+.d {
+	color: #C8B642;
 }
 
 .header {
@@ -33,6 +58,9 @@ body {
 	color: #333333;
 	
 }
+.header img {
+	max-width: 90%;
+}
 
 .tagline {
 	margin: auto;
@@ -40,37 +68,75 @@ body {
 	margin-top: 25px;
 }
 
-.work-examples {
-	/*background: rgba(229,229,229,.65);*/
-	background: url('dsl-back.png');
-	min-height: 600px;
-	padding: 40px 0;
-	/*-moz-box-shadow: inset 0 14px 19px -7px #b4b4b4;
-	-webkit-box-shadow: inset 0 14px 19px -7px #b4b4b4;
-	box-shadow: inset 0 14px 19px -7px #b4b4b4;*/
--moz-box-shadow: inset 0 14px 19px -7px #333;
-	-webkit-box-shadow: inset 0 14px 19px -7px #333;
-	box-shadow: inset 0 14px 19px -7px #333;	
+.mission {
+	font-size: 2em;
+	margin-bottom: 1em;
+}
+
+.work-examples .content-container .mission a {
+	color: #A3D4D0;
+}
+
+.work-examples .content-container {
+	text-shadow: 0 2px 0 #1D3331;
+	color: white;
+	font-size: 1.3em;
+	text-align: center;
 	
 }
 
+.work-examples .content-container a{
+	color: #B0E26E;
+}
+
+.work-examples .content-container a.external-link {
+	color: #E9F0E1;
+}
+
+.work-examples {
+	background: url('dsl-back.png');
+	padding: 80px 0;
+	-moz-box-shadow: inset 0 14px 19px -7px #333;
+	-webkit-box-shadow: inset 0 14px 19px -7px #333;
+	box-shadow: inset 0 14px 19px -7px #333;	
+}
+
+.work-examples ul {
+	text-align: left;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+	-webkit-column-gap: 1em;
+	-moz-column-gap: 1em;
+	column-gap: 1em;
+	margin: 30px 0;
+
+}
+
+.work-examples ul li {
+	list-style-type: square;	
+}
+.work-examples hr {
+	height: 1px;
+	border: 0;
+	border-bottom: 1px solid #333;
+	box-shadow: 0px 1px 0px #777;
+}
+
 .work-examples h2 {
-	font-size: 48px;
-	color: #cae6ee;
+	font-size:  52px;
+	color: #86DFD7;
 }
 
 .work-grid {
 	-moz-box-shadow: 0 0 10px 2px #444;
 	-webkit-box-shadow: 0 0 10px 2px #444;
 	box-shadow: 0 0 10px 2px #444;
-	width: 875px;
-	height: 665px;
-	margin: 60px auto;
-	-moz-border-radius: 15px;
-border-radius: 15px;
+	height: 640px;
+	/*margin: 60px auto;*/
 	background: #eee;
-	overflow: scroll;
-
+	overflow: hidden;
+	background-image: url(tiled.jpg);
 }
 
 .work-grid-row1 ul {
@@ -87,13 +153,17 @@ border-radius: 15px;
 	
 }
 
+.content-container .contact-content {
+	color: #333;
+}
+
 .contact {
 	background: rgba(240,243,246,.35);
 	-moz-box-shadow: inset 0 14px 19px -7px #b4b4b4;
 	-webkit-box-shadow: inset 0 14px 19px -7px #b4b4b4;
 	box-shadow: inset 0 14px 19px -7px #b4b4b4;
 	min-height: 300px;
-	padding: 40px 0;
+	padding: 80px 0;
 }
 
 .contact h2 {
@@ -102,7 +172,7 @@ border-radius: 15px;
 	text-align: center;}
 
 .contact h3 {
-	color: #6c913a;
+	color: #579994;
 	font-size: 52px;
 	
 }
@@ -125,7 +195,7 @@ border-radius: 15px;
 
 .contact-content a {
 	text-decoration: none;
-	color: #0a429d;
+	color: #436DB3;
 }
 
 .contact-content ul {
@@ -134,21 +204,54 @@ border-radius: 15px;
 }
 
 .work-for-us {
-	width: 450px;
-	float: left;
+
 }
 
 .hire-us {
-	width: 450px;
-	float: left;
-	margin-left: 30px;
+
+
+}
+
+.footer {
+	background-color: #363636;
+	padding: 30px 0;
+-moz-box-shadow: inset 0 14px 19px -7px #333;
+	-webkit-box-shadow: inset 0 14px 19px -7px #333;
+	box-shadow: inset 0 14px 19px -7px #333;	
 	
+}
+
+.footer .content-container {
+	color: white;
+	text-shadow: none;
+	font-size: 1.3em;
+	text-align: left;
+}
+
+.contact-details {
+	float: left;
+	font-size: 16px;
+}
+.contact-details p{
+	margin-left: 85px;
+	margin-top: 10px;
+}
+.social-media{
+	float: right
+}
+
+/* fb footer thing */
+.pluginBoxDivider {
+	border-color: #555 !important;
 }
 
 .content-container{
 	width: 1000px;
 	margin: auto;
+	text-shadow: 0 1px 0 white;
+	text-align: center;
 }
+
 
 .clear{
 	clear: both;

@@ -458,7 +458,7 @@
 
                                                              
                                                                 
-                                                                <% control Pages %>
+                                                                <% control Menu(3) %>
                                                                 <table bgcolor="#F9F2D2" style="border: 1px solid #ddd;" cellpadding="4" cellspacing="4" >
 	                                                                <tbody>
 		                                                                <tr>
