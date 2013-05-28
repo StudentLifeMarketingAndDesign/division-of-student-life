@@ -20,7 +20,7 @@
 
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>  
   <!--[if lt IE 7 ]><script src="js/dd_belatedpng.js?v=1"></script><![endif]-->
-
+  <script src="division-bar/js/division-bar.js"></script>
   <script src="{$ThemeDir}/js/jquery.hoverIntent.minified.js"></script>
   <script type="text/javascript">
   	jQuery(document).ready(function() {
