@@ -38,3 +38,6 @@ SortableDataObject::add_sortable_class('SidebarImage');
 
 GD::set_default_quality(85);
 
+if(Director::isLive()) {
+	Director::forceSSL(array('/^Security/','/^admin/'));
+}
